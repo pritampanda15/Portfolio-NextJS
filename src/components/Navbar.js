@@ -7,7 +7,7 @@ import {
   GithubIcon,
   LinkedInIcon,
   MoonIcon,
-  PinterestIcon,
+  BlueskyIcon,
   SunIcon,
   TwitterIcon,
 } from "./Icons";
@@ -93,7 +93,8 @@ const Navbar = () => {
         <CustomLink className="mr-4" href="/" title="Home" />
         <CustomLink className="mx-4" href="/about" title="About" />
         <CustomLink className="mx-4" href="/projects" title="Projects" />
-        <CustomLink className="ml-4" href="/articles" title="Articles" />
+        <CustomLink className="ml-4" href="/articles" title="Publications" />
+        <CustomLink className="ml-4" href="/articles" title="YouTube" />
       </nav>
       <nav
         className="flex items-center justify-center flex-wrap lg:mt-2
@@ -135,9 +136,9 @@ const Navbar = () => {
           href="#"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
-          aria-label="Checkout my pinterest profile"
+          aria-label="Checkout my bluesky profile"
         >
-          <PinterestIcon />
+          <BlueskyIcon />
         </motion.a>
         <motion.a
           target={"_blank"}
@@ -179,7 +180,8 @@ const Navbar = () => {
         <CustomMobileLink toggle={handleClick} className="mr-4 lg:m-0 lg:my-2" href="/" title="Home" />
         <CustomMobileLink toggle={handleClick} className="mx-4 lg:m-0 lg:my-2" href="/about" title="About" />
         <CustomMobileLink toggle={handleClick} className="mx-4 lg:m-0 lg:my-2" href="/projects" title="Projects" />
-        <CustomMobileLink toggle={handleClick} className="ml-4 lg:m-0 lg:my-2" href="/articles" title="Articles" />
+        <CustomMobileLink toggle={handleClick} className="ml-4 lg:m-0 lg:my-2" href="/articles" title="Publications" />
+        <CustomMobileLink toggle={handleClick} className="ml-4 lg:m-0 lg:my-2" href="/articles" title="YouTube" />
       </nav>
       <nav
         className="flex items-center justify-center  mt-2
