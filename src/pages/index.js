@@ -58,6 +58,7 @@ export default function Home() {
             capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
             dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
             md:p-2 md:px-4 md:text-base
+            mr-4
              `}
                   download
                 >
@@ -77,7 +78,7 @@ export default function Home() {
             md:p-2 md:px-4 md:text-base
              `}
                 >
-                  Stanford Profile <LinkArrow className="ml-1 !w-6 md:!w-4" />
+                  Stanford Profile <LinkArrow className="ml-2 !w-6 md:!w-4" />
                 </Link>
 
                 <Link
@@ -97,7 +98,7 @@ export default function Home() {
           <Image
             className="relative h-auto w-full"
             src={lightBulb}
-            alt="Codebucks"
+            alt="Pritam"
           />
         </div>
       </article>
