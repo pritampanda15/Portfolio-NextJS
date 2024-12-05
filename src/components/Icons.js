@@ -443,13 +443,14 @@ export const CircularText = ({ className, ...rest }) => (
         d="M248,248m-200,0a200,200,0,1,1,400,0a200,200,0,1,1,-400,0"
       />
     </defs>
-    <text fontFamily="Arial, montserrat" fontSize="60" fill="black">
+    <text fontFamily="montserrat" fontSize="55" className="circular-text">
       <textPath href="#circlePath" textAnchor="middle">
         Bioinformatician . Scientist . Web Developer . Bioinformatician . Scientist . Web Developer .
       </textPath>
     </text>
   </svg>
 );
+
 
 export const LinkArrow = ({ className, ...rest }) => (
   <svg

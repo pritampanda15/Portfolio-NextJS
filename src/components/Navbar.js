@@ -103,7 +103,7 @@ const Navbar = () => {
         <motion.a
           target={"_blank"}
           className="w-6 mr-3"
-          href="#"
+          href="https://twitter.com/pritamkpanda"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           aria-label="Checkout my twitter profile"
@@ -113,7 +113,7 @@ const Navbar = () => {
         <motion.a
           target={"_blank"}
           className="w-6 mx-3"
-          href="#"
+          href="https://github.com/pritampanda15"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           aria-label="Checkout my github profile"
@@ -123,7 +123,7 @@ const Navbar = () => {
         <motion.a
           target={"_blank"}
           className="w-6 mx-3"
-          href="#"
+          href="https://www.linkedin.com/in/pritam-kumar-panda/"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           aria-label="Checkout my linkedin profile"
@@ -133,7 +133,7 @@ const Navbar = () => {
         <motion.a
           target={"_blank"}
           className="w-6 mx-3 bg-light rounded-full"
-          href="#"
+          href="https://bsky.app/profile/pritampkp15.bsky.social"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           aria-label="Checkout my bluesky profile"
@@ -143,7 +143,7 @@ const Navbar = () => {
         <motion.a
           target={"_blank"}
           className="w-6 mx-3"
-          href="#"
+          href="https://dribbble.com/pritampkp15"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           aria-label="Checkout my dribbble profile"
