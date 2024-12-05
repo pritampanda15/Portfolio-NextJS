@@ -64,6 +64,22 @@ export default function Home() {
                   Resume <LinkArrow className="ml-1 !w-6 md:!w-4" />
                 </Link>
 
+
+                <Link
+                  // whileHover={{
+                  //   cursor: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='font-size:24px;'><text y='50%'>👆</text></svg>"), auto`,
+                  // }}
+                  href="https://profiles.stanford.edu/pritam-panda"
+                  target={"_blank"}
+                  className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
+            capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
+            dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
+            md:p-2 md:px-4 md:text-base
+             `}
+                >
+                  Stanford Profile <LinkArrow className="ml-1 !w-6 md:!w-4" />
+                </Link>
+
                 <Link
                   href="mailto:pritam@stanford.edu"
                   className="ml-4 text-lg font-medium capitalize text-dark underline 
