@@ -190,7 +190,7 @@ const Navbar = () => {
         <motion.a
           target={"_blank"}
           className="w-6 m-1 mr-3 sm:mx-1"
-          href="#"
+          href="https://twitter.com/pritamkpanda"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           aria-label="Checkout my twitter profile"
@@ -216,21 +216,23 @@ const Navbar = () => {
           aria-label="Checkout my linkedin profile"
         >
           <LinkedInIcon />
-        </motion.a>
+        
+          </motion.a>
         <motion.a
           target={"_blank"}
           className="w-6 m-1 mx-3 bg-light rounded-full sm:mx-1"
-          href="#"
+          href="https://bsky.app/profile/pritampkp15.bsky.social"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
-          aria-label="Checkout my pinterest profile"
+          aria-label="Checkout my bluesky profile"
         >
-          <PinterestIcon />
+          <BlueskyIcon />
+
         </motion.a>
         <motion.a
           target={"_blank"}
           className="w-6 m-1 mx-3 sm:mx-1"
-          href="#"
+          href="https://dribbble.com/pritampkp15"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           aria-label="Checkout my dribbble profile"
