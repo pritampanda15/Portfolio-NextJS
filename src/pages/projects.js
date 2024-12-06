@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import proj1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
+import proj1 from "../../public/images/projects/gridbox.png";
 import proj2 from "../../public/images/projects/nft-collection-website-cover-image.jpg";
 import proj3 from "../../public/images/projects/fashion-studio-website.jpg";
 import proj4 from "../../public/images/projects/portfolio-cover-image.jpg";
@@ -184,11 +184,11 @@ export default function Projects() {
             <div className="col-span-12">
               <FeaturedProject
                 type="Featured Project"
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
+                title="Grid-Box-Generator"
+                summary="Generate a grid box for AutoDock Vina using Python web-app created using Flask without the need for MGLTools. This app helps you to generate or define grid box for Autodock Vina and Autodock4 for both blind and targeted docking."
                 img={proj1}
-                link="https://devdreaming.com/videos/build-crypto-screener-app-with-react-tailwind-css"
-                github="https://github.com/codebucks27/CryptoBucks-Final-Code"
+                link="https://grid-box-generator-bcb8da462cd0.herokuapp.com"
+                github="https://github.com/pritampanda15/Grid-Box-Generator"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
