@@ -59,60 +59,81 @@ const Experience = () => {
             className="absolute left-9 top-0 w-[4px] md:w-[2px] md:left-[30px] xs:left-[20px] h-full bg-dark 
             origin-top  dark:bg-primaryDark dark:shadow-3xl"
             style={{ scaleY: scrollYProgress }}
+          
           />
           <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
-            <Details
-              position="Software Engineer"
-              company="Google"
-              companyLink="https://google.com"
-              time="2022-Present"
-              address="Mountain View, CA"
-              work="Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
+          <Details
+              position="Postdoctoral Scholar"
+              company="Stanford University"
+              companyLink="https://profiles.stanford.edu/pritam-panda"
+              time="Jan 2025-present"
+              address="California, USA"
+              work="Spearheaded innovative research at the department of Anesthesiology, Perioperative and Pain Medicine, Stanford University School of Medicine focused on the design of battlefield-optimized anesthetics using AI-driven protein design, molecular dynamics simulations, and computational drug design to enhance anesthetic efficacy and adaptability in extreme conditions."
             />
 
             <Details
-              position="Intern"
-              company="Facebook"
-              companyLink="https://facebook.com"
-              time="Summer 2021"
-              address="Menlo Park, CA."
-              work="Worked on a team responsible for developing a new mobile app
-              feature that allowed users to create and share short-form video
-              content, including designing and implementing a new user interface
-              and developing the backend infrastructure to support the feature."
+              position="Bioinformatician"
+              company="German Cancer Research Center DKFZ"
+              companyLink="https://www.dkfz.de/en/index.html"
+              time="July 2023-Dec 2024"
+              address="Heidelberg, Germany"
+              work="Managed large-scale big data projects, automating NGS analysis pipelines, optimizing sequencing workflows with the DKFZ One Touch Pipeline database and leading multidisciplinary teams. Translating/piloting common bioinformatics tools to applications suitable for non-bioinformatics biologists and clinicians to query and interpret the molecular/clinical data."
             />
 
             <Details
-              position="Software Developer"
-              company="Amazon"
-              companyLink="https://amazon.com"
-              time="2020-2021"
-              address="Seattle, WA."
-              work="Worked on a team responsible for developing Amazon's mobile app, including implementing new features such as product recommendations and user reviews, and optimizing the app's performance and reliability."
+              position="Bioinformatics Engineer | UI/UX Designer"
+              company="Helmholtz-Institute for Translational Oncology Mainz (HI-TRON)"
+              companyLink="https://hi-tron.dkfz.de/research-support/platforms/data-architecture-platform.html"
+              time="July 2023-Dec 2024"
+              address="Mainz, Germany"
+              work="Implemented the HI-TRON data portal backend & frontend, enhancing data accessibility and user experience through MOLGENIS, VueJs and FAIR practices & and collect feedback and feature requirements from researchers including biologists, clinical trial designers and clinicians."
+            />
+
+              <Details
+              position="Bioinformatics Consultant"
+              company="Colgate & Palmolive"
+              companyLink="https://www.colgatepalmolive.com/en-us/who-we-are"
+              time="Nov 2021-Jun 2023"
+              address="Piscataway-NJ, USA"
+              work="Collaborated on developing a pipeline for combinatorial synergy-based drug design targeting photoaging and hyperpigmentation, which led to the publication of an article showcasing the innovative approach and findings. Demonstrated expertise in drug discovery research, with a strong focus on Computer-Aided Drug Design (CADD) methodologies and techniques."
             />
 
             <Details
-              position="Software Developer Intern"
-              company="Microsoft"
-              companyLink="https://microsoft.com"
-              time="Summer 2019"
-              address="Redmond, WA."
-              work="Worked on a team responsible for developing new features for
-              Microsoft's Windows operating system, including implementing a new
-              user interface for a system settings panel and optimizing the
-              performance of a core system component."
+              position="Founder & CEO"
+              company="Nerdalytics"
+              companyLink="https://www.nerdalytics.org/home"
+              time="Dec 2021-Jul 2023"
+              address="Uppsala, Sweden"
+              work="Foundedaprojectmanagementstartupspecializinginbioinformaticsconsultancyforpharmaceuticalindustries,aligning services with industry demands. Adapted company policies, regulations, and financial strategies to effectively manage multiple projects, ensuring long-term viability and sustainability. Led budgeting, coordination, and development of confidential projects with pharmaceutical companies, focusing on defining project scope, cost estimation, and key deliverables."
+            />
+            
+            <Details
+              position="Affiliated Researcher"
+              company="Karolinska Institute"
+              companyLink="https://ki.se/en/research/research-areas-centres-and-networks/research-groups/johan-frostegards-research-group#tab-projects"
+              time="Mar 2021-Mar 2023"
+              address="Stockholm, Sweden"
+              work="Implemented immunoinformatics pipelines for modeling in-house antibody clones, enabling antibody profiling and simulation to understand the immunomodulatory effects in cardiovascular-related disorders. Enhanced patient stratification and biomarker selection in clinical trials by developing novel predictive models using statistical techniques and machine learning on complex clinical data, including genomic data and antibody clones from patient samples."
             />
 
             <Details
-              position="Teaching Assistant"
-              company="MIT"
-              companyLink="https://mit.edu"
-              time="Fall 2018"
-              address="Massachusetts Ave, Cambridge, MA."
-              work="Assisted in teaching a course on computer programming, held office
-              hours to help students with assignments, and graded exams and
-              assignments."
+              position="Doctoral Researcher"
+              company="Uppsala University"
+              companyLink="https://uu.diva-portal.org/smash/record.jsf?pid=diva2%3A1736122&dswid=2537"
+              time="Nov 2018-Mar 2023"
+              address="Uppsala, Sweden"
+              work="Developed a multi-scale modeling pipeline, enhancing computational efficiency and accuracy by utilizing molecular dynamics simulations on proteins, nanomaterials, complexes, and membrane models. Bridged quantum and biological behaviors of bio-inspired materials by establishing links to understand interface chemistry, focusing on 2D materials modeling."
             />
+
+            <Details
+              position="NGS Data Analyst"
+              company="University Medical Center, University of Freiburg"
+              companyLink="https://uni-freiburg.de/en/university/university-medical-center/"
+              time="Sep 2017-Oct 2018"
+              address="Freiburg im Breisgau, Germany"
+              work="Enhanced clinical diagnostics for Myelodysplastic Syndromes by developing and validating whole exome sequencing (WES) and NEBNext Direct clinical cancer hotspot panel pipelines, focusing on accurate variant identification and annotation. Spearheaded a collaborative research project to design and analyze WES and gene-expression data using RNA-seq pipelines, leading to significant performance improvements."
+            />
+
           </ul>
         </div>
         </div>
