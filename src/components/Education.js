@@ -43,25 +43,44 @@ const Education = () => {
           style={{ scaleY: scrollYProgress }}
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4">
-          <Details
-            type="Bachelor of Science in Computer Science"
-            time="2016-2020"
-            place="Massachusetts Institute of Technology (MIT)"
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial Intelligence."
-          />
+        <Details
+    type="Ph.D. in Physics | Specialization in Atomic, Molecular and Condensed Matter Physics"
+    time="2018-2023"
+    place="Uppsala University, Sweden"
+    info={
+      <>
+        Thesis: <a href="http://uu.diva-portal.org/smash/get/diva2:1736122/FULLTEXT01.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">GENOME2QUNOME: Interfacing Molecules with Nanomaterials</a>
+      </>
+    }
+  />
 
           <Details
-            type="Master of Computer Science"
-            time="2020-2022"
-            place="Stanford University"
-            info="Completed a master's project on deep learning, developing a new neural network architecture for natural language understanding."
+            type="Master of Technology in Bioinformatics "
+            time="2014-2016"
+            place="D Y Patil University, Navi Mumbai, India"
+            info={
+              <>
+                Thesis: <a href="https://drive.google.com/file/d/1wnSvo_kik5OELPsv2ymHKcpBeiFyAfpF/view" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Systems Genetics and Magnetic Resonance Spectroscopy Measurable Biomarkers in Neurodegenerative Diseases</a>
+              </>
+            }
           />
 
-          <Details
-            type="Online Coursework"
-            time="2016-2020"
-            place="Coursera and edX"
-            info="Completed coursework in advanced topics such as Reinforcement Learning, Computer Vision, and Machine Learning Engineering."
+            <Details
+            type="Master of Science in Bioinformatics "
+            time="2012-2014"
+            place="Utkal University, Bhubaneswar, India"
+            info={
+              <>
+                Thesis: <a href="https://www.researchgate.net/publication/274896591_Mutational_Analysis_and_Structural_study_of_Optineurin_OPTN_in_GlaucomaAn_Insilco_approach" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Mutational Analysis and Structural study of Optineurin (OPTN) in Glaucoma, An Insilco approach</a>
+              </>
+            }
+          />
+
+<Details
+            type="Bachelor of Science in Bioinformatics "
+            time="2009-2012"
+            place="Utkal University, Bhubaneswar, India"
+            info="Completed coursework in advanced topics in Bioinformatics such as Molecular Modeling, Drug Designing, Statistical analysis and Biophysics"
           />
         </ul>
       </div>
