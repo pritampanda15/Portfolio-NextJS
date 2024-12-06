@@ -60,23 +60,23 @@ export default function About() {
                 BIOGRAPHY
               </h2>
               <p className="font-medium ">
-                Hi, I&apos;m <strong>CodeBucks</strong>, a web developer and
-                UI/UX designer with a passion for creating beautiful,
-                functional, and user-centered digital experiences. With 4 years
-                of experience in the field. I am always looking for new and
-                innovative ways to bring my clients&apos; visions to life.
+                Hi, I&apos;m <strong>Pritam</strong>,  an accomplished bioinformatician and researcher 
+                specializing in drug design, molecular modeling, and AI-driven protein design, NGS, 
+                multimomics and workflow management. 
+                Originally from India and currently based in San Francisco, California, he holds a 
+                Ph.D. in Physics, specializing in Atomic, Molecular, and Condensed Matter Physics 
+                from Uppsala University in Sweden, where his research bridged quantum and 
+                biological phenomena. 
+                
               </p>
               <p className="my-4 font-medium">
-                I believe that design is about more than just making things look
-                pretty – it&apos;s about solving problems and creating
-                intuitive, enjoyable experiences for users.
+              Currently, I work as a Postdoctoral Scholar in the Department of Anesthesiology, 
+              Perioperative, and Pain Medicine at <strong>Stanford University School of Medicine</strong>. My current research is centered on designing novel anesthetics suitable for battlefield conditions. Leveraging AI-driven protein design and high-throughput virtual screening, 
+              I bring my expertise to accelerate the drug discovery process and develop effective anesthetic agents.
               </p>
               <p className="font-medium">
-                Whether I&apos;m working on a website, mobile app, or other
-                digital product, I bring my commitment to design excellence and
-                user-centered thinking to every project I work on. I look
-                forward to the opportunity to bring my skills and passion to
-                your next project.
+              Whether I'm working with genomic datasets, protein structures, or other bioinformatics challenges, 
+              I bring my commitment to analytical precision and data-driven problem-solving to every project I undertake.
               </p>
             </div>
             <div className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark 
@@ -102,7 +102,7 @@ export default function About() {
             xl:items-center md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={40} />+
+                  <AnimatedNumberFramerMotion value={60} />+
                 </span>
                 <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
                 xl:text-center md:text-lg sm:text-base xs:text-sm">
@@ -112,7 +112,7 @@ export default function About() {
 
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={50} />+
+                  <AnimatedNumberFramerMotion value={100} />+
                 </span>
                 <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
                 xl:text-center md:text-lg sm:text-base xs:text-sm">
@@ -122,7 +122,7 @@ export default function About() {
 
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={4} />+
+                  <AnimatedNumberFramerMotion value={7} />+
                 </span>
                 <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
                 xl:text-center md:text-lg sm:text-base xs:text-sm">
