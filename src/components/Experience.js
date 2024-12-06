@@ -104,9 +104,36 @@ const Experience = () => {
               companyLink="https://www.nerdalytics.org/home"
               time="Dec 2021-Jul 2023"
               address="Uppsala, Sweden"
-              work="Foundedaprojectmanagementstartupspecializinginbioinformaticsconsultancyforpharmaceuticalindustries,aligning services with industry demands. Adapted company policies, regulations, and financial strategies to effectively manage multiple projects, ensuring long-term viability and sustainability. Led budgeting, coordination, and development of confidential projects with pharmaceutical companies, focusing on defining project scope, cost estimation, and key deliverables."
+              work="Founded a project management startup specializing in bioinformatics consultancy for pharmaceutical industries, aligning services with industry demands. Adapted company policies, regulations, and financial strategies to effectively manage multiple projects, ensuring long-term viability and sustainability. Led budgeting, coordination, and development of confidential projects with pharmaceutical companies, focusing on defining project scope, cost estimation, and key deliverables."
             />
-            
+
+            <Details
+              position="Hackathon Organizer"
+              company="LongHack"
+              companyLink="https://www.linkedin.com/company/72112157/admin/dashboard/"
+              time="Jun 2021-Sep 2022"
+              address="Helsinki, Finland"
+              work=" Spearheaded the organization of two successful hackathons focused on longevity, showcasing strong leadership and project management skills. Played a key role in identifying potential customers and expanding networks, fostering valuable connections within the scientific and entrepreneurial communities through the hackathon platform. Guided and supported participants throughout the hackathon process,ensuring their understanding and addressing their needs effectively."
+            />
+
+            <Details
+              position="Clinical Consultant"
+              company="Breath of Health"
+              companyLink="https://bohpharma.com/Breath-Based-screening.php"
+              time="Nov 2021-Dec 2022"
+              address="Cambridge, Massachusetts, USA"
+              work="Experienced in developing machine learning models and pipelines tailored for next-generation sequencing (NGS) data analysis and automation from exhaled breath samples , optimizing workflows to enhance efficiency and accuracy in proteomics research.  Proficient in supporting clinical and bioinformatics data analysis, contributing to successful funding acquisition and research initiatives."
+            />
+
+              <Details
+              position="Bioinformatics Consultant"
+              company="Inflanova AB"
+              companyLink="https://inflanova.com/"
+              time="Aug 2021-Mar 2023"
+              address="Stockholm, Sweden"
+              work="Utilized multiomics and bioinformatics approaches to develop innovative strategies for vaccine design and therapeutic interventions. Played a pivotal role in identifying potential clients within industrial sectors interested in vaccine formulation by leveraging market research and networking skills to establish connections and initiate discussions with prospective partners. Filed a patent WO2023217787 for a clinical vaccine candidate targeting antiviral therapy. "
+            />
+
             <Details
               position="Affiliated Researcher"
               company="Karolinska Institute"
