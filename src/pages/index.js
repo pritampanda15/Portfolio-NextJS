@@ -78,7 +78,7 @@ export default function Home() {
             md:p-2 md:px-4 md:text-base
              `}
                 >
-                  Stanford Profile <LinkArrow className="ml-2 !w-6 md:!w-4" />
+                  Stanford <LinkArrow className="ml-2 !w-6 md:!w-4" />
                 </Link>
 
                 <Link

@@ -161,6 +161,15 @@ const Experience = () => {
               work="Enhanced clinical diagnostics for Myelodysplastic Syndromes by developing and validating whole exome sequencing (WES) and NEBNext Direct clinical cancer hotspot panel pipelines, focusing on accurate variant identification and annotation. Spearheaded a collaborative research project to design and analyze WES and gene-expression data using RNA-seq pipelines, leading to significant performance improvements."
             />
 
+              <Details
+              position="YouTuber"
+              company="Bioinformatics Copilot"
+              companyLink="https://www.youtube.com/@BioinfoCopilot"
+              time="Jan 2017-present"
+              address="California, USA"
+              work="Provides in-depth tutorials on bioinformatics tools, techniques, and software, suitable for beginners and advanced users."
+            />
+
           </ul>
         </div>
         </div>
