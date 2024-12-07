@@ -2,8 +2,8 @@ import AnimatedText from "@/components/AnimatedText";
 import { motion, useMotionValue } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
-import blog1 from "../../public/images/articles/pagination component in reactjs.jpg";
-import blog2 from "../../public/images/articles/create loading screen in react js.jpg";
+import blog1 from "../../public/images/articles/science.png";
+import blog2 from "../../public/images/articles/nature.png";
 import blog3 from "../../public/images/articles/form validation in reactjs using custom react hook.png";
 import blog4 from "../../public/images/articles/smooth scrolling in reactjs.png";
 import blog5 from "../../public/images/articles/create modal component in react using react portals.png";
@@ -145,21 +145,18 @@ export default function Articles() {
           <ul className="grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16">
             <FeaturedArticle
               img={blog1}
-              title="build a custom pagination component in reactjs from scratch"
-              time="9 min read"
-              summary="Learn how to build a custom pagination component in ReactJS from scratch. Follow this 
-              step-by-step guide to integrate Pagination component in your ReactJS project."
-              link="https://devdreaming.com/blogs/create-pagination-component-reactjs"
+              title="Structure-based drug designing and immunoinformatics approach for SARS-CoV-2"
+              time="Science Advances (AAAS)"
+              summary="After virtually screening 640 existing drug compounds, researchers have revealed that PC786 potently targets several SARS-CoV-2 receptors, making it a candidate to fight COVID-19."
+              link="https://www.science.org/doi/full/10.1126/sciadv.abb8097"
             />
 
             <FeaturedArticle
               img={blog2}
-              title="creating stunning loading screens in react: Build 3 types of loading screens"
-              time="10 min read"
-              summary="Learn how to create stunning loading screens in React with 3 different methods. 
-              Discover how to use React-Loading, React-Lottie & build a custom loading screen. Improve the 
-              user experience."
-              link="https://devdreaming.com/blogs/create-3-different-types-of-loading-screens-in-react"
+              title="Clinical evolution, genetic landscape and trajectories of clonal hematopoiesis in SAMD9/SAMD9L syndromes"
+              time="Nature Medicine"
+              summary="Genetic rescue, a 'natural gene therapy,' suggests possible new approach to pediatric MDS. Single-cell DNA analysis has identified a “battle of clones” in pediatric (MDS) patients whose cells may self-correct."
+              link="https://www.nature.com/articles/s41591-021-01511-6"
             />
           </ul>
 
