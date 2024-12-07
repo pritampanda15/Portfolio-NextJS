@@ -6,11 +6,11 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import proj1 from "../../public/images/projects/gridbox.png";
-import proj2 from "../../public/images/projects/nft-collection-website-cover-image.jpg";
-import proj3 from "../../public/images/projects/fashion-studio-website.jpg";
-import proj4 from "../../public/images/projects/portfolio-cover-image.jpg";
-import proj5 from "../../public/images/projects/agency-website-cover-image.jpg";
-import proj6 from "../../public/images/projects/devdreaming.jpg";
+import proj2 from "../../public/images/projects/Structufy.png";
+import proj3 from "../../public/images/projects/step.png";
+import proj4 from "../../public/images/projects/gromacs.png";
+import proj5 from "../../public/images/projects/siesta.png";
+import proj6 from "../../public/images/projects/ngs.jpg";
 import TransitionEffect from "@/components/TransitionEffect";
 
 const FramerImage = motion(Image);
@@ -193,48 +193,48 @@ export default function Projects() {
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Website Template"
-                title="NFT collection Website"
+                type="Drug Designing tool"
+                title="Structify-Chemical-Structure-Converter"
                 img={proj2}
-                link="https://devdreaming.com/videos/create-nft-collection-website-reactjs"
-                github="https://github.com/codebucks27/The-Weirdos-NFT-Website-Starter-Code"
+                link="https://structify-chemical-converter-f735c2cc4ea3.herokuapp.com"
+                github="https://github.com/pritampanda15/Structify-Chemical-Structure-Converter"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Website"
-                title="Fashion Studio Website"
+                type="Molecular Dynamics Tool"
+                title="GROMACS-StepWizard"
                 img={proj3}
-                link="https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap"
-                github="https://github.com/codebucks27/wibe-studio"
+                link="https://gromacs-stepwizard-7e3791398062.herokuapp.com"
+                github="https://github.com/pritampanda15/GROMACS-StepWizard"
               />
             </div>
             <div className="col-span-12">
               <FeaturedProject
-                type="Portfolio Website"
-                title="React Portfolio Website"
-                summary="A professional portfolio website using React JS, Framer-motion, and Styled-components. It has smooth page transitions, cool background effects, unique design and it is mobile responsive."
+                type="Molecular Dynamics"
+                title="Gromacs-Command-Finder"
+                summary="Gromacs Command Finder is a tool to search for gromacs specific comands like topology, trajectory analysis, PME, etc."
                 img={proj4}
-                link="https://devdreaming.com/videos/build-stunning-portfolio-website-react-js-framer-motion"
-                github="https://github.com/codebucks27/react-portfolio-final"
+                link=" https://gromacs-command-finder-a9630d013893.herokuapp.com/"
+                github="https://github.com/pritampanda15/Gromacs-Command-Finder"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Website Template"
+                type="Quantum Physics"
                 img={proj5}
-                title="Agency Website Template"
-                link="https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap"
-                github="https://github.com/codebucks27/wibe-studio"
+                title="Siesta"
+                link="https://github.com/pritampanda15/Siesta/blob/master/relax.fdf"
+                github="https://github.com/pritampanda15/Siesta"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Blog Website"
+                type="NGS"
                 img={proj6}
-                title="DevDreaming"
-                link="https://devdreaming.com"
-                github="https://github.com/codebucks27"
+                title="WES Pipeline"
+                link="https://github.com/pritampanda15/NGS-Workflows/tree/main/WholeExomeSequencing-Pipeline-main"
+                github="https://github.com/pritampanda15/NGS-Workflows/tree/main"
               />
             </div>
           </div>
