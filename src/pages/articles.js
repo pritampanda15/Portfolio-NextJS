@@ -4,7 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import blog1 from "../../public/images/articles/science.png";
 import blog2 from "../../public/images/articles/nature.png";
-import blog3 from "../../public/images/articles/form validation in reactjs using custom react hook.png";
+import blog3 from "../../public/images/articles/blog3.jpg";
 import blog4 from "../../public/images/articles/smooth scrolling in reactjs.png";
 import blog5 from "../../public/images/articles/create modal component in react using react portals.png";
 import blog6 from "../../public/images/articles/todo list app built using react redux and framer motion.png";
@@ -166,10 +166,10 @@ export default function Articles() {
 
           <ul className="flex flex-col items-center relative">
             <Article
-              title="form validation in reactjs: build a reusable custom hook for inputs and error handling"
+              title="A novel professional-use synergistic peel technology to reduce visible hyperpigmentation on face: Clinical evidence and mechanistic understanding by computational biology and optical biopsy"
               img={blog3}
-              date="January 27, 2023"
-              link="https://devdreaming.com/blogs/react-form-validation-custom-hook"
+              date="Experimental Dermatology, Wiley"
+              link="https://onlinelibrary.wiley.com/doi/full/10.1111/exd.15069"
             />
             <Article
               title="silky smooth scrolling in reactjs: a step-by-step guide for react developers"
