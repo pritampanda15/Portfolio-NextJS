@@ -153,10 +153,10 @@ export default function Articles() {
     />
     <FeaturedArticle
       img={blog2}
-      title="Clinical evolution, genetic landscape and trajectories of clonal hematopoiesis in SAMD9/SAMD9L syndromes"
-      time="Nature Medicine"
-      summary="Genetic rescue, a 'natural gene therapy,' suggests possible new approach to pediatric MDS. Single-cell DNA analysis has identified a “battle of clones” in pediatric (MDS) patients whose cells may self-correct."
-      link="https://www.nature.com/articles/s41591-021-01511-6"
+      title="My Journey with Nextflow: From Exploration to Automation"
+      time="Nextflow Blog"
+      summary="I approach bioinformatics workflows in a whole different way now that I’ve used Nextflow. It has evolved into a vital tool in my toolbox, capable of handling massive genomic datasets ensuring repeatability and scalability. "
+      link="https://seqera.io/blog/journey-from-exploration-to-automation/"
     />
   </ul>
 

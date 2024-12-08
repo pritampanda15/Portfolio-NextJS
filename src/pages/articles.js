@@ -138,7 +138,7 @@ export default function Articles() {
       >
         <Layout className="pt-16">
           <AnimatedText
-            text="Words Can Change the World!"
+            text="Innovative Insights, Infinite Possibilities!"
             className="!text-8xl !leading-tight mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
 
