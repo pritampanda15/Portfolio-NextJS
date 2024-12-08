@@ -431,9 +431,9 @@ export const MoonIcon = ({ className, ...rest }) => (
 export const CircularText = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="496"
-    height="496"
-    viewBox="0 0 496 496"
+    width="300" // Reduced width
+    height="300" // Reduced height
+    viewBox="0 0 300 300" // Adjusted viewBox to match new dimensions
     xmlSpace="preserve"
     className={`w-full h-auto ${className}`}
     {...rest}
@@ -441,16 +441,17 @@ export const CircularText = ({ className, ...rest }) => (
     <defs>
       <path
         id="circlePath"
-        d="M248,248m-200,0a200,200,0,1,1,400,0a200,200,0,1,1,-400,0"
+        d="M150,150m-100,0a100,100,0,1,1,200,0a100,100,0,1,1,-200,0" // Adjusted radius
       />
     </defs>
-    <text fontFamily="montserrat" fontSize="55" className="circular-text">
+    <text fontFamily="montserrat" fontSize="27.5" fontWeight="semibold"  className="circular-text"> // Reduced font size
       <textPath href="#circlePath" textAnchor="middle">
         Bioinformatician . Scientist . Web Developer . Bioinformatician . Scientist . Web Developer .
       </textPath>
     </text>
   </svg>
 );
+
 
 
 export const LinkArrow = ({ className, ...rest }) => (
