@@ -2,8 +2,8 @@ import AnimatedText from "@/components/AnimatedText";
 import { motion, useMotionValue } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
-import blog1 from "../../public/images/articles/science.png";
-import blog2 from "../../public/images/articles/nature.png";
+import blog1 from "../../public/images/blogs/ambassador.png";
+import blog2 from "../../public/images/blogs/blog.png";
 import blog3 from "../../public/images/articles/blog3.jpg";
 import blog4 from "../../public/images/articles/smooth scrolling in reactjs.png";
 import blog5 from "../../public/images/articles/create modal component in react using react portals.png";
@@ -146,10 +146,10 @@ export default function Articles() {
   <ul className="grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16">
     <FeaturedArticle
       img={blog1}
-      title="Structure-based drug designing and immunoinformatics approach for SARS-CoV-2"
-      time="Science Advances (AAAS)"
-      summary="After virtually screening 640 existing drug compounds, researchers have revealed that PC786 potently targets several SARS-CoV-2 receptors, making it a candidate to fight COVID-19."
-      link="https://www.science.org/doi/full/10.1126/sciadv.abb8097"
+      title="Nextflow Ambassador"
+      time="Seqera"
+      summary="I actively promote the adoption of Nextflow for scalable and reproducible data analysis pipelines. I collaborate with the community to share best practices and drive innovation in workflow management."
+      link="https://www.nextflow.io/our_ambassadors.html"
     />
     <FeaturedArticle
       img={blog2}
