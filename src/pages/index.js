@@ -5,7 +5,7 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
+import lightBulb from "../../public/images/svgs/atom.svg";
 import profilePic from "../../public/images/profile/profilepic.png";
 import TransitionEffect from "@/components/TransitionEffect";
 
@@ -65,7 +65,6 @@ export default function Home() {
                   Resume <LinkArrow className="ml-1 !w-6 md:!w-4" />
                 </Link>
 
-
                 <Link
                   // whileHover={{
                   //   cursor: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='font-size:24px;'><text y='50%'>👆</text></svg>"), auto`,
@@ -75,18 +74,25 @@ export default function Home() {
                   className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
             capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
             dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
-            md:p-2 md:px-4 md:text-base
+            md:p-2 md:px-4 md:text-base mr-4
              `}
                 >
                   Stanford <LinkArrow className="ml-2 !w-6 md:!w-4" />
                 </Link>
 
                 <Link
-                  href="mailto:pritam@stanford.edu"
-                  className="ml-4 text-lg font-medium capitalize text-dark underline 
-                  dark:text-light md:text-base"
+                  // whileHover={{
+                  //   cursor: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='font-size:24px;'><text y='50%'>👆</text></svg>"), auto`,
+                  // }}
+                  href="https://www.youtube.com/@BioinfoCopilot"
+                  target={"_blank"}
+                  className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
+            capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
+            dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
+            md:p-2 md:px-4 md:text-base 
+             `}
                 >
-                  Contact
+                  YouTube <LinkArrow className="ml-3 !w-6 md:!w-4" />
                 </Link>
               </div>
             </div>
