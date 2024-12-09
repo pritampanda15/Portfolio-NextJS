@@ -99,9 +99,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          {/* News Section */}
-<section className="mt-16 w-full">
+{/* News Section */}
+          <section className="mt-16 w-full">
   <h2 className="text-4xl font-bold mb-8 text-center">Latest News</h2>
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {news.length > 0 ? (
@@ -133,12 +132,15 @@ export default function Home() {
               >
                 Read More
               </Link>
+              <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                {item.time}
+              </span>
             </div>
           </div>
         </article>
       ))
     ) : (
-      <p className="text-center text-gray-500">No news available.</p>
+      <p className="text-center text-xl font-medium">No news available at the moment.</p>
     )}
   </div>
 </section>
