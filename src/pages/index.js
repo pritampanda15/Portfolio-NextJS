@@ -5,7 +5,7 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import lightBulb from "../../public/images/svgs/atom.svg";
+//import lightBulb from "../../public/images/svgs/atom.svg";
 import profilePic from "../../public/images/profile/profilepic.png";
 import TransitionEffect from "@/components/TransitionEffect";
 import { useState, useEffect } from "react";
@@ -148,9 +148,9 @@ export default function Home() {
         <HireMe />
         <div className="absolute right-8 bottom-8 inline-block w-24 md:hidden">
           <Image
-            className="relative h-auto w-full"
-            src={lightBulb}
-            alt="Pritam"
+            //className="relative h-auto w-full"
+            //src={lightBulb}
+            //alt="Pritam"
           />
         </div>
       </article>
