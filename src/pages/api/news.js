@@ -17,8 +17,14 @@ export default function handler(req, res) {
         excerpt: "A heartfelt thank you to everyone for your support and encouragement as we hit the 5K subscriber milestone. Stay tuned for more exciting content!",
         time: "YouTube", // Replace with your preferred date and time
         link: "https://www.youtube.com/@BioinfoCopilot", // Replace with the link to your YouTube channel
-    },
+      },
 
+      {
+      title: "Celebrating 10K Followers on My LinkedIn Profile!",
+      excerpt: "A heartfelt thank you to everyone for your support and encouragement as I hit the 10K followers milestone. Stay tuned for more exciting content!",
+      time: "LinkedIn", // Replace with your preferred date and time
+      link: "https://www.linkedin.com/in/pritam-kumar-panda/", // Replace with the link to your YouTube channel
+      },
 
   ];
 
