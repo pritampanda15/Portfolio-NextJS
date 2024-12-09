@@ -44,10 +44,13 @@ const Skills = () => {
       </motion.div>
 
         <Skill name="Git" x="-20vw" y="2vw" />
+        <Skill name="NGS" x="-25vw" y="10vw" />
+        <Skill name="Docker/Singularity" x="30vw" y="-17vw" />
 
           <Skill name="Python" x="-5vw" y="-10vw" />
           <Skill name="R/Shiny" x="20vw" y="6vw" />
           <Skill name="Nextflow" x="0vw" y="12vw" />
+          <Skill name="Molecular Dynamics" x="0vw" y="24vw" />
           <Skill name="ML/AI" x="-20vw" y="-15vw" />
           <Skill name="Snakemake" x="15vw" y="-12vw" />
           <Skill name="Multiomics" x="-35vw" y="-5vw" />
