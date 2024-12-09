@@ -127,7 +127,7 @@ export default function Articles() {
   return (
     <>
       <Head>
-        <title>Pritam's Portfolio | Articles Page</title>
+        <title>Pritam's Portfolio | Publications Page</title>
         <meta name="description" content="Browse through Pritam's scientific publications"/>
       </Head>
       <TransitionEffect />

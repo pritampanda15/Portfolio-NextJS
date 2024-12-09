@@ -5,10 +5,36 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-//import lightBulb from "../../public/images/svgs/atom.svg";
 import profilePic from "../../public/images/profile/profilepic.png";
 import TransitionEffect from "@/components/TransitionEffect";
 import { useState, useEffect } from "react";
+
+// News Component
+const News = ({ title, img, date, link, type }) => (
+  <li className="mb-8 w-full max-w-2xl">
+    <article className="relative flex flex-col items-center justify-center w-full p-6 border border-solid border-dark bg-light rounded-2xl shadow-2xl dark:border-light dark:bg-dark xs:p-4">
+      <div className="absolute top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] bg-dark dark:bg-light xs:h-[102%] xs:rounded-[1.5rem]" />
+      {img && <img src={img} alt={title} className="rounded-t-lg mb-4 w-full" />}
+      <h3 className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">
+        {type}
+      </h3>
+      <h2 className="my-2 text-3xl font-bold text-center lg:text-2xl">
+        {title}
+      </h2>
+      <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+        {date}
+      </p>
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-4 text-lg font-medium text-primary underline md:text-base"
+      >
+        Read More
+      </a>
+    </article>
+  </li>
+);
 
 export default function Home() {
   const [news, setNews] = useState([]);
@@ -22,7 +48,6 @@ export default function Home() {
     fetchNews();
   }, []);
 
-
   return (
     <>
       <Head>
@@ -35,7 +60,7 @@ export default function Home() {
 
       <TransitionEffect />
       <article
-        className={`flex min-h-screen items-center text-dark dark:text-light sm:items-start`}
+        className="flex min-h-screen items-center text-dark dark:text-light sm:items-start"
       >
         <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
           <div className="flex w-full items-start justify-between md:flex-col">
@@ -60,12 +85,10 @@ export default function Home() {
                 <Link
                   href="/CV.pdf"
                   target={"_blank"}
-                  className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
-            capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
-            dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
-            md:p-2 md:px-4 md:text-base
-            mr-4
-             `}
+                  className="flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
+                  capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
+                  dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
+                  md:p-2 md:px-4 md:text-base mr-4"
                   download
                 >
                   Resume <LinkArrow className="ml-1 !w-6 md:!w-4" />
@@ -74,11 +97,10 @@ export default function Home() {
                 <Link
                   href="https://profiles.stanford.edu/pritam-panda"
                   target={"_blank"}
-                  className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
-            capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
-            dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
-            md:p-2 md:px-4 md:text-base mr-4
-             `}
+                  className="flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
+                  capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
+                  dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
+                  md:p-2 md:px-4 md:text-base mr-4"
                 >
                   Stanford <LinkArrow className="ml-2 !w-6 md:!w-4" />
                 </Link>
@@ -86,73 +108,45 @@ export default function Home() {
                 <Link
                   href="https://www.youtube.com/@BioinfoCopilot"
                   target={"_blank"}
-                  className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
-            capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
-            dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
-            md:p-2 md:px-4 md:text-base 
-             `}
+                  className="flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
+                  capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
+                  dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
+                  md:p-2 md:px-4 md:text-base"
                 >
                   YouTube <LinkArrow className="ml-3 !w-6 md:!w-4" />
                 </Link>
               </div>
             </div>
           </div>
-{/* News Section */}
-          <section className="mt-16 w-full">
-  <h2 className="text-4xl font-bold mb-8 text-center">Latest News</h2>
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    {news.length > 0 ? (
-      news.map((item, index) => (
-        <article
-          key={index}
-          className="relative flex w-full flex-col items-center justify-center rounded-2xl rounded-br-2xl 
-          border border-solid border-dark bg-light p-6 shadow-2xl dark:border-light dark:bg-dark xs:p-4"
-        >
-          <div
-            className="absolute top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark
-            dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]"
-          />
-          <div className="flex w-full flex-col items-start justify-between">
-            <h3 className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">
-              {item.type || "News"}
-            </h3>
-            <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl">
-              {item.title}
-            </h2>
-            <p className="my-2 rounded-md font-medium text-dark dark:text-light sm:text-sm">
-              {item.excerpt}
-            </p>
-            <div className="flex w-full items-center justify-between">
-              <Link
-                href={item.link}
-                target="_blank"
-                className="rounded text-lg font-medium underline md:text-base"
-              >
-                Read More
-              </Link>
-              <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                {item.time}
-              </span>
-            </div>
-          </div>
-        </article>
-      ))
-    ) : (
-      <p className="text-center text-xl font-medium">No news available at the moment.</p>
-    )}
-  </div>
-</section>
 
+          {/* News Section */}
+          <section className="mt-16 w-full">
+            <h2 className="font-bold text-4xl w-full text-center mt-32 my-16">
+              Latest News
+            </h2>
+
+            <ul className="flex flex-col items-center relative">
+              {news.length > 0 ? (
+                news.map((item, index) => (
+                  <News
+                    key={index}
+                    title={item.title}
+                    img={item.img}
+                    date={item.time}
+                    link={item.link}
+                    type={item.type || "News"}
+                  />
+                ))
+              ) : (
+                <p className="text-center text-xl font-medium">
+                  No news available at the moment.
+                </p>
+              )}
+            </ul>
+          </section>
         </Layout>
 
         <HireMe />
-        <div className="absolute right-8 bottom-8 inline-block w-24 md:hidden">
-          <Image
-            //className="relative h-auto w-full"
-            //src={lightBulb}
-            //alt="Pritam"
-          />
-        </div>
       </article>
     </>
   );
