@@ -8,10 +8,21 @@ import Link from "next/link";
 import lightBulb from "../../public/images/svgs/atom.svg";
 import profilePic from "../../public/images/profile/profilepic.png";
 import TransitionEffect from "@/components/TransitionEffect";
-
+import { useState, useEffect } from "react";
 
 export default function Home() {
-  
+  const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    async function fetchNews() {
+      const response = await fetch("/api/news");
+      const data = await response.json();
+      setNews(data);
+    }
+    fetchNews();
+  }, []);
+
+
   return (
     <>
       <Head>
@@ -45,13 +56,10 @@ export default function Home() {
                 className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
-              As a skilled bioinformatician, I bring expertise in AI-driven protein design, drug discovery and multiomics to uncover the secrets of life's blueprint. At Atom Odyssey, I combine computational biology, data science, and cutting-edge web technologies to redefine how we explore and innovate in the life sciences. Join me in this journey to revolutionize biology, one atom at a time.
+                As a skilled bioinformatician, I bring expertise in AI-driven protein design, drug discovery, and multiomics to uncover the secrets of life's blueprint. At Atom Odyssey, I combine computational biology, data science, and cutting-edge web technologies to redefine how we explore and innovate in the life sciences. Join me in this journey to revolutionize biology, one atom at a time.
               </p>
               <div className="mt-2 flex items-center self-start lg:self-center">
                 <Link
-                  // whileHover={{
-                  //   cursor: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='font-size:24px;'><text y='50%'>👆</text></svg>"), auto`,
-                  // }}
                   href="/CV.pdf"
                   target={"_blank"}
                   className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
@@ -66,9 +74,6 @@ export default function Home() {
                 </Link>
 
                 <Link
-                  // whileHover={{
-                  //   cursor: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='font-size:24px;'><text y='50%'>👆</text></svg>"), auto`,
-                  // }}
                   href="https://profiles.stanford.edu/pritam-panda"
                   target={"_blank"}
                   className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
@@ -81,9 +86,6 @@ export default function Home() {
                 </Link>
 
                 <Link
-                  // whileHover={{
-                  //   cursor: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='font-size:24px;'><text y='50%'>👆</text></svg>"), auto`,
-                  // }}
                   href="https://www.youtube.com/@BioinfoCopilot"
                   target={"_blank"}
                   className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
@@ -97,6 +99,50 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* News Section */}
+<section className="mt-16 w-full">
+  <h2 className="text-4xl font-bold mb-8 text-center">Latest News</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {news.length > 0 ? (
+      news.map((item, index) => (
+        <article
+          key={index}
+          className="relative flex w-full flex-col items-center justify-center rounded-2xl rounded-br-2xl 
+          border border-solid border-dark bg-light p-6 shadow-2xl dark:border-light dark:bg-dark xs:p-4"
+        >
+          <div
+            className="absolute top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark
+            dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]"
+          />
+          <div className="flex w-full flex-col items-start justify-between">
+            <h3 className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">
+              {item.type || "News"}
+            </h3>
+            <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl">
+              {item.title}
+            </h2>
+            <p className="my-2 rounded-md font-medium text-dark dark:text-light sm:text-sm">
+              {item.excerpt}
+            </p>
+            <div className="flex w-full items-center justify-between">
+              <Link
+                href={item.link}
+                target="_blank"
+                className="rounded text-lg font-medium underline md:text-base"
+              >
+                Read More
+              </Link>
+            </div>
+          </div>
+        </article>
+      ))
+    ) : (
+      <p className="text-center text-gray-500">No news available.</p>
+    )}
+  </div>
+</section>
+
         </Layout>
 
         <HireMe />
