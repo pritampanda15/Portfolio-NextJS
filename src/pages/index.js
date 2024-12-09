@@ -56,7 +56,7 @@ export default function Home() {
                 className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
-                As a skilled bioinformatician, I bring expertise in AI-driven protein design, drug discovery, and multiomics to uncover the secrets of life's blueprint. At Atom Odyssey, I combine computational biology, data science, and cutting-edge web technologies to redefine how we explore and innovate in the life sciences. Join me in this journey to revolutionize biology, one atom at a time.
+                As a skilled bioinformatician, I bring expertise in AI-driven protein design, drug discovery, and multiomics to uncover the secrets of life's blueprint. I combine computational biology, data science, and cutting-edge web technologies to redefine how we explore and innovate in the life sciences. Join me in this journey to revolutionize biology, one atom at a time.
               </p>
               <div className="mt-2 flex items-center self-start lg:self-center">
                 <Link
