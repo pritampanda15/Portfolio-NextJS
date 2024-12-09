@@ -2,7 +2,7 @@ export default function handler(req, res) {
   const news = [
       {
           title: "Excited to Join Stanford as a Postdoc!",
-          excerpt: "Thrilled to announce that I'll be joining Stanford University as a Postdoctoral Scholar in the Department of Anesthesiology, Perioperative, and Pain Medicine at Stanford University School of Medicine. My current research is centered on designing novel anesthetics suitable for battlefield conditions. Leveraging AI-driven protein design and high-throughput virtual screening, he aims to accelerate the drug discovery process and develop effective anesthetic agents.",
+          excerpt: "Thrilled to announce that I'll be joining Stanford University as a Postdoctoral Scholar in the Department of Anesthesiology, Perioperative, and Pain Medicine at Stanford University School of Medicine.",
           time: "Stanford University", // Add your preferred date and time format
           link: "https://profiles.stanford.edu/pritam-panda", // Update with your profile or announcement link
       },
