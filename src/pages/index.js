@@ -26,12 +26,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Portfolio Built with Nextjs</title>
+        <title>Pritam's Portfolio</title>
         <meta
           name="description"
-          content="Explore CodeBucks's Next.js developer portfolio and 
-        discover the latest webapp projects and software engineering articles. 
-        Showcase your skills as a full-stack developer and software engineer."
+          content="Explore academic journey of Dr. Pritam Panda in AI-driven protein design, drug discovery, and multiomics. Discover how Dr. Panda uses cutting-edge technology to unlock the secrets of life's blueprint and redefine how we explore and innovate in the life sciences."
         />
       </Head>
 
