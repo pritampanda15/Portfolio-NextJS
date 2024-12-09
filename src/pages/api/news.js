@@ -9,7 +9,7 @@ export default function handler(req, res) {
       {
           title: "The ABCs of AlphaFold 3, Boltz, and Chai-1",
           excerpt: "I recently came across The ABCs of AlphaFold 3, Boltz, and Chai-1, a fascinating report exploring the advancements in AI-based protein structure prediction and modeling by Brian Naughton. How do you envision integrating these technologies into your workflows?",
-          time: "Brian Naughton, Boolean Biotech", // Add your preferred date and time format
+          time: "Boolean Biotech", // Add your preferred date and time format
           link: "https://www.linkedin.com/feed/update/urn:li:activity:7268935224925794304/",
       },
       {
