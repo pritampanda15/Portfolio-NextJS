@@ -43,23 +43,18 @@ const Skills = () => {
         Bioinformatics
       </motion.div>
 
-        <Skill name="Molecular Modeling" x="-20vw" y="2vw" />
+        <Skill name="Git" x="-20vw" y="2vw" />
 
-          <Skill name="Drug Designing" x="-5vw" y="-10vw" />
-          <Skill name="Molecular Dynamics" x="20vw" y="6vw" />
-          <Skill name="Python" x="0vw" y="12vw" />
-          <Skill name="R" x="-20vw" y="-15vw" />
-          <Skill name="Multiomics" x="15vw" y="-12vw" />
-          <Skill name="NGS" x="-35vw" y="-5vw" />
-          <Skill name="ML/AI" x="32vw" y="-5vw" />
-          <Skill name="Bash" x="0vw" y="-20vw" />
-          <Skill name="JavaScript" x="-25vw" y="18vw" />
-          <Skill name="Flask" x="-20vw" y="10vw" />
-          <Skill name="Nextflow" x="-38vw" y="8vw" />
-          <Skill name="Snakemake" x="35vw" y="3vw" />
-          <Skill name="Git" x="3vw" y="20vw" />
-          <Skill name="Docker/Singularity" x="30vw" y="-16vw" />
-          <Skill name="Web Dev" x="28vw" y="18vw" />
+          <Skill name="Python" x="-5vw" y="-10vw" />
+          <Skill name="R/Shiny" x="20vw" y="6vw" />
+          <Skill name="Nextflow" x="0vw" y="12vw" />
+          <Skill name="ML/AI" x="-20vw" y="-15vw" />
+          <Skill name="Snakemake" x="15vw" y="-12vw" />
+          <Skill name="Multiomics" x="-35vw" y="-5vw" />
+          <Skill name="Web Design" x="32vw" y="-5vw" />
+          <Skill name="Workflow Management" x="0vw" y="-22vw" />
+          <Skill name="Drug Designing" x="-25vw" y="18vw" />
+          <Skill name="Molecular Modeling" x="28vw" y="18vw" />
     </div></>
   );
 };
