@@ -29,7 +29,7 @@ export default function Home() {
         <title>Pritam's Portfolio</title>
         <meta
           name="description"
-          content="Explore academic journey of Dr. Pritam Panda in AI-driven protein design, drug discovery, and multiomics."
+          content="Explore academic journey of Dr. Pritam Panda in AI-driven protein design, drug discovery, and multiomics. Discover how Dr. Panda uses cutting-edge technology to unlock the secrets of life's blueprint and redefine how we explore and innovate in the life sciences."
         />
       </Head>
 
