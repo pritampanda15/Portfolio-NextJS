@@ -119,9 +119,27 @@ export default function Home() {
             </div>
           </div>
 
+          <section className="mt-16 w-full text-center">
+  <h2 className="font-bold text-4xl w-full text-center mt-16 mb-8">
+    Pioneering Discoveries in Life Sciences
+  </h2>
+  <p className="text-lg font-medium text-dark dark:text-light mb-8 mx-auto max-w-3xl">
+    Explore the breakthroughs and innovations that are transforming the fields of bioinformatics, AI-driven research, and drug discovery. From cutting-edge projects to collaborations with leading institutions, stay updated on the journey to redefine how we approach the mysteries of life sciences.
+  </p>
+  <Link
+    href="https://scholar.google.com/citations?user=YOUR_PROFILE_ID&user=H2ggrzQAAAAJ"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block bg-dark text-light px-6 py-3 rounded-lg text-lg font-semibold hover:bg-transparent hover:text-dark border-2 border-dark 
+    dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light dark:border-light transition-colors"
+  >
+    Google Scholar
+  </Link>
+</section>
+
           {/* News Section */}
           <section className="mt-16 w-full">
-            <h2 className="font-bold text-4xl w-full text-center mt-32 my-16">
+            <h2 className="font-bold text-4xl w-full text-center mt-16 my-8">
               Latest News
             </h2>
 
