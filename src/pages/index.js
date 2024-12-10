@@ -60,7 +60,7 @@ export default function Home() {
 
       <TransitionEffect />
       <article
-        className="flex min-h-screen items-center text-dark dark:text-light sm:items-start"
+        className="flex min-h-screen items-center text-dark dark:text-light sm:items-start mt-10 sm:mt-8 md:mt-6 lg:mt-12"
       >
         <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
           <div className="flex w-full items-start justify-between md:flex-col">
