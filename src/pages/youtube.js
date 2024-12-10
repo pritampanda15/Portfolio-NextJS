@@ -1,14 +1,15 @@
 import AnimatedText from "@/components/AnimatedText";
 import { GithubIcon } from "@/components/Icons";
+import { YouTubeIcon } from "@/components/Icons";
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import proj1 from "../../public/images/projects/gridbox.png";
+import proj1 from "../../public/images/youtube/nvidia.png";
 import proj2 from "../../public/images/projects/Structufy.png";
 import proj3 from "../../public/images/projects/step.png";
-import proj4 from "../../public/images/projects/gromacs.png";
+import proj4 from "../../public/images/youtube/autodock.png";
 import proj5 from "../../public/images/projects/siesta.png";
 import proj6 from "../../public/images/projects/ngs.jpg";
 import TransitionEffect from "@/components/TransitionEffect";
@@ -81,7 +82,7 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
             "
             aria-label="Crypto Screener Application"
           >
-            Visit Project
+            YouTube
           </Link>
         </div>
       </div>
@@ -182,18 +183,18 @@ export default function Projects() {
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
-                type="Featured Project"
-                title="Grid-Box-Generator"
-                summary="Generate a grid box for AutoDock Vina using Python web-app created using Flask without the need for MGLTools. This app helps you to generate or define grid box for Autodock Vina and Autodock4 for both blind and targeted docking."
+                type="Featured Video"
+                title="Nvidia Generative AI for Docking & Virtual Screening"
+                summary="NVIDIA BioNeMo microservices enable a new generative screening paradigm. DiffDock is a diffusion generative model for drug discovery in molecular blind docking."
                 img={proj1}
-                link="https://grid-box-generator-bcb8da462cd0.herokuapp.com"
-                github="https://github.com/pritampanda15/Grid-Box-Generator"
+                link="https://www.youtube.com/watch?v=AsmQhvFAS80"
+                github="https://github.com/gcorso/DiffDock"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
                 type="Drug Designing tool"
-                title="Structify-Chemical-Structure-Converter"
+                title="Molecular Docking for Beginners | Autodock Full Tutorial"
                 img={proj2}
                 link="https://structify-chemical-converter-f735c2cc4ea3.herokuapp.com"
                 github="https://github.com/pritampanda15/Structify-Chemical-Structure-Converter"
@@ -211,11 +212,11 @@ export default function Projects() {
             <div className="col-span-12">
               <FeaturedProject
                 type="Molecular Dynamics"
-                title="Gromacs-Command-Finder"
-                summary="Gromacs Command Finder is a tool to search for gromacs specific comands like topology, trajectory analysis, PME, etc."
+                title="Molecular Docking for Beginners | Autodock Full Tutorial"
+                summary="This tutorial will introduce you to docking using the AutoDock suite of programs. "
                 img={proj4}
-                link=" https://gromacs-command-finder-a9630d013893.herokuapp.com/"
-                github="https://github.com/pritampanda15/Gromacs-Command-Finder"
+                link=" https://www.youtube.com/watch?v=ZVKKsK5DsCY&t=5374s"
+                github="https://github.com/pritampanda15/Drug-Designing"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
