@@ -169,39 +169,81 @@ export default function Articles() {
           <ul className="flex flex-col items-center relative">
             <Article
               title="A novel professional-use synergistic peel technology to reduce visible hyperpigmentation on face: Clinical evidence and mechanistic understanding by computational biology and optical biopsy"
-              img={blog3}
+              //img={blog3}
               date="Experimental Dermatology, Wiley"
               link="https://onlinelibrary.wiley.com/doi/full/10.1111/exd.15069"
             />
             <Article
-              title="silky smooth scrolling in reactjs: a step-by-step guide for react developers"
-              img={blog4}
-              date="January 30, 2023"
-              link="https://devdreaming.com/blogs/smooth-scrolling-in-react-js"
+              title="Degradation of Alzheimer's Amyloid-β by a Catalytically Inactive Insulin-Degrading Enzyme"
+              //img={blog4}
+              date="Journal of molecular biology"
+              link="https://www.sciencedirect.com/science/article/abs/pii/S0022283621001947?via%3Dihub"
             />
             <Article
-              title="creating an efficient modal component in react using hooks and portals"
-              img={blog5}
-              date="January 29, 2023"
-              link="https://devdreaming.com/blogs/create-efficient-modal-react-portals"
+              title="Azacitidine is effective for targeting leukemia-initiating cells in juvenile myelomonocytic leukemia"
+              //img={blog5}
+              date="Nature Leukemia"
+              link="https://www.nature.com/articles/s41375-018-0343-2"
             />
             <Article
-              title="build a fabulous todo list app with react, redux and framer-motion"
-              img={blog6}
-              date="January 28, 2023"
-              link="https://devdreaming.com/blogs/build-react-redux-framer-motion-todo-app"
+              title="Investigation of the Factors That Dictate the Preferred Orientation of Lexitropsins in the Minor Groove of DNA. "
+              //img={blog6}
+              date="Journal of medicinal chemistry"
+              link="https://pubs.acs.org/doi/10.1021/acs.jmedchem.9b01534"
             />
             <Article
-              title="redux simplified: a beginner's guide for web developers"
-              img={blog7}
-              date="January 31, 2023"
-              link="https://devdreaming.com/blogs/redux-simply-explained"
+              title="Nanocarrier vaccine therapeutics for global infectious and chronic diseases "
+              //img={blog7}
+              date="Materials Today"
+              link="https://www.sciencedirect.com/science/article/pii/S1369702123001128?via%3Dihub"
             />
             <Article
-              title="what is higher order component (hoc) in react?"
-              date="January 4, 2023"
-              img={blog8}
-              link="https://devdreaming.com/blogs/higher-order-component-hoc-react"
+              title="Putative targeting by BX795 causes decrease in protein kinase C protein levels and inhibition of HSV1 infection"
+              date="Antiviral research"
+              //img={blog8}
+              link="https://www.sciencedirect.com/science/article/abs/pii/S0166354222002236?via%3Dihub"
+            />
+            <Article
+              title="Antibodies Against Phosphorylcholine Among 60-Year-Olds: Clinical Role and Simulated Interactions"
+              date="Frontiers in cardiovascular medicine"
+              //img={blog8}
+              link="https://www.frontiersin.org/journals/cardiovascular-medicine/articles/10.3389/fcvm.2022.809007/full"
+            />
+            <Article
+              title="Nanocarrier cancer therapeutics with functional stimuli-responsive mechanisms"
+              date="Journal of nanobiotechnology"
+              //img={blog8}
+              link="https://jnanobiotechnology.biomedcentral.com/articles/10.1186/s12951-022-01364-2"
+            />
+            <Article
+              title="Dynamical modeling of miR-34a, miR-449a, and miR-16 reveals numerous DDR signaling pathways regulating senescence, autophagy, and apoptosis in HeLa cells"
+              date="Scientific reports"
+              //img={blog8}
+              link="https://www.nature.com/articles/s41598-022-08900-y"
+            />
+            <Article
+              title="Plasmodium falciparum HSP40 protein eCiJp traffics to the erythrocyte cytoskeleton and interacts with the human HSP70 chaperone HSPA1"
+              date="FEBS letters"
+              //img={blog8}
+              link="https://febs.onlinelibrary.wiley.com/doi/10.1002/1873-3468.14255"
+            />
+            <Article
+              title="Molecular nanoinformatics approach assessing the biocompatibility of biogenic silver nanoparticles with channelized intrinsic steatosis and apoptosis "
+              date="Green Chemistry"
+              //img={blog8}
+              link="https://pubs.rsc.org/en/content/articlelanding/2022/gc/d1gc04103g"
+            />
+            <Article
+              title="Effects of Atorvastatin on T-Cell Activation and Apoptosis in Systemic Lupus Erythematosus and Novel Simulated Interactions With C-Reactive Protein and Interleukin 6"
+              date="ACR open rheumatology"
+              //img={blog8}
+              link="https://acrjournals.onlinelibrary.wiley.com/doi/10.1002/acr2.11305"
+            />
+            <Article
+              title="The mechanism behind flaring/triggering of autoimmunity disorders associated with COVID-19"
+              date="Autoimmunity reviews"
+              //img={blog8}
+              link="https://www.sciencedirect.com/science/article/pii/S1568997221001841?via%3Dihub"
             />
           </ul>
         </Layout>
