@@ -278,8 +278,6 @@ export default function Projects() {
               />
             </div>
 
-
-
           </div>
         </Layout>
       </main>
