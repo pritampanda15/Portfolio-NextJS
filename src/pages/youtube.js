@@ -7,11 +7,14 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import proj1 from "../../public/images/youtube/nvidia.png";
-import proj2 from "../../public/images/projects/Structufy.png";
-import proj4 from "../../public/images/youtube/autodock.png";
+import proj2 from "../../public/images/youtube/autodock.png";
 import proj3 from "../../public/images/youtube/MDsimulation2.png";
-import proj5 from "../../public/images/projects/siesta.png";
-import proj6 from "../../public/images/projects/ngs.jpg";
+import proj4 from "../../public/images/youtube/playlist1.png";
+import proj5 from "../../public/images/youtube/playlist2.png";
+import proj6 from "../../public/images/youtube/playlist3.png";
+import proj7 from "../../public/images/youtube/playlist4.png";
+import proj8 from "../../public/images/youtube/playlist5.png";
+import proj9 from "../../public/images/youtube/playlist6.png";
 import TransitionEffect from "@/components/TransitionEffect";
 
 const FramerImage = motion(Image);
@@ -197,7 +200,7 @@ export default function Projects() {
                 type="Drug Discovery"
                 title="Molecular Docking for Beginners | Autodock Full Tutorial"
                 summary="This tutorial will introduce you to docking using the AutoDock suite of programs. "
-                img={proj4}
+                img={proj2}
                 link=" https://www.youtube.com/watch?v=ZVKKsK5DsCY&t=5374s"
                 github="https://github.com/pritampanda15/Drug-Designing"
               />
@@ -205,7 +208,7 @@ export default function Projects() {
 
             <div className="col-span-12">
               <FeaturedProject
-                type="Molecular Dynamics Simulations"
+                type="Molecular Dynamics Simulation"
                 title="Molecular Dynamics Simulation of Protein-Ligand using Gromacs"
                 summary="This tutorial focuses specifically on issues related to dealing with the ligand, assuming that the user is familiar with basic GROMACS operations and the contents of a topology.  "
                 img={proj3}
@@ -215,11 +218,65 @@ export default function Projects() {
             </div>
 
 
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="Drug Designing"
+                img={proj4}
+                title="Molecular Docking Playlist"
+                link="https://www.youtube.com/watch?v=j6gRyBHn2JU&list=PLS3KFDv2o0CR327JLYQvAN7WI59GqdwPU&pp=gAQB"
+                github="https://github.com/pritampanda15/Drug-Designing"
+              />
+            </div>
 
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="Molecular Dynamics Simulation"
+                img={proj5}
+                title="Molecular Dynamics Simulation Playlist"
+                link="https://www.youtube.com/watch?v=27lf1qLP7QU&list=PLS3KFDv2o0CQIvkKuL7kU2rfowWIfHFFN&pp=gAQB"
+                github="https://github.com/pritampanda15/Molecular-Dynamics"
+              />
+            </div>
 
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="NGS"
+                img={proj6}
+                title="Nextflow Playlist"
+                link="https://www.youtube.com/watch?v=7fIY0kV9x6o&list=PLS3KFDv2o0CQxUuyAMyYdp_PoiVbdSa_8&pp=gAQB"
+                github="https://github.com/pritampanda15/NGS-Workflows"
+              />
+            </div>
 
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="NGS"
+                img={proj7}
+                title="Next-Gen Sequencing Tools"
+                link="https://www.youtube.com/watch?v=XstXZrCtpB4&list=PLS3KFDv2o0CTIHjh-6lp7qgrqgcDvswvG&pp=gAQB"
+                github="https://github.com/pritampanda15/NGS-Workflows"
+              />
+            </div>
 
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="Proteomics"
+                img={proj8}
+                title="Flow Cytometry Analysis"
+                link="https://www.youtube.com/watch?v=9OGWdYiBoO0&list=PLS3KFDv2o0CTgxt_aKQZNHPYeb95qJvhR&pp=gAQB"
+                github="https://github.com/pritampanda15/Proteomics"
+              />
+            </div>
 
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="Quantum Physics"
+                img={proj9}
+                title="Siesta & Transiesta"
+                link="https://www.youtube.com/watch?v=VcqnYwb4kws&list=PLS3KFDv2o0CTV8bJ9clpDW4I-CReFSKG-&pp=gAQB"
+                github="https://github.com/pritampanda15/Siesta"
+              />
+            </div>
 
 
 
