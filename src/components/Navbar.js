@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
 import {
-  DribbbleIcon,
+  GoogleScholarIcon,
   GithubIcon,
   LinkedInIcon,
   MoonIcon,
@@ -144,12 +144,12 @@ const Navbar = () => {
         <motion.a
           target={"_blank"}
           className="w-6 mx-3"
-          href="https://dribbble.com/pritampkp15"
+          href="https://scholar.google.com/citations?user=H2ggrzQAAAAJ&hl=en"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
-          aria-label="Checkout my dribbble profile"
+          aria-label="Checkout my google scholar profile"
         >
-          <DribbbleIcon />
+          <GoogleScholarIcon />
         </motion.a>
 
         <button
@@ -234,12 +234,12 @@ const Navbar = () => {
         <motion.a
           target={"_blank"}
           className="w-6 m-1 mx-3 sm:mx-1"
-          href="https://dribbble.com/pritampkp15"
+          href="https://scholar.google.com/citations?user=H2ggrzQAAAAJ&hl=en"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           aria-label="Checkout my dribbble profile"
         >
-          <DribbbleIcon />
+          <GoogleScholarIcon />
         </motion.a>
 
         <button
