@@ -7,7 +7,7 @@ import blog2 from "../../public/images/blogs/blog.png";
 import blog3 from "../../public/images/blogs/skin.jpeg";
 import blog4 from "../../public/images/blogs/global.png";
 import blog5 from "../../public/images/blogs/otv.png";
-import blog6 from "../../public/images/articles/todo list app built using react redux and framer motion.png";
+import blog6 from "../../public/images/blogs/bioinfoskills.png";
 import blog7 from "../../public/images/articles/What is Redux with easy explanation.png";
 import blog8 from "../../public/images/articles/What is higher order component in React.jpg";
 
@@ -142,13 +142,15 @@ export default function Articles() {
 
   {/* First set of articles */}
   <ul className="grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16">
-    <FeaturedArticle
-      img={blog1}
-      title="Nextflow Ambassador"
-      time="Seqera"
-      summary="I actively promote the adoption of Nextflow for scalable and reproducible data analysis pipelines. I collaborate with the community to share best practices and drive innovation in workflow management."
-      link="https://www.nextflow.io/our_ambassadors.html"
+  <FeaturedArticle
+      img={blog6}
+      title="Bioinformatics skills required in 2024"
+      time="Medium"
+      summary="The other day, I stumbled upon a job description from a company describing the requirements. Here is the list, and I believe it should be applied in general to any bioinformatician looking for a job."
+      link="https://medium.com/@pritampkp15/bioinformatics-skills-required-in-2024-170cc08e37e7"
     />
+
+    
     <FeaturedArticle
       img={blog2}
       title="My Journey with Nextflow: From Exploration to Automation"
@@ -190,6 +192,13 @@ export default function Articles() {
       This show seems to be edgy due to the controversial nature it holds and as 
       it makes sure to push the envelope with the kind of topics it tends to discuss with your favorite celebs."
       link="https://www.youtube.com/watch?v=PDBdjyWd-8s&t=519s"
+    />
+    <FeaturedArticle
+      img={blog1}
+      title="Nextflow Ambassador"
+      time="Seqera"
+      summary="I actively promote the adoption of Nextflow for scalable and reproducible data analysis pipelines. I collaborate with the community to share best practices and drive innovation in workflow management."
+      link="https://www.nextflow.io/our_ambassadors.html"
     />
   </ul>
 </Layout>
