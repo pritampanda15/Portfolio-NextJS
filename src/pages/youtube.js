@@ -83,7 +83,7 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
              bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark 
              sm:px-4 sm:text-base
             "
-            aria-label="Crypto Screener Application"
+            aria-label="Latest Bioinformatics Youtube Videos"
           >
             YouTube
           </Link>
@@ -183,7 +183,25 @@ export default function Projects() {
             text="Imagination Trumps Knowledge!"
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
-          <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+
+<section className="w-full text-center">
+  <p className="md:text-sm sm:!text-xs font-medium text-dark dark:text-light mb-8 mx-auto max-w-2xl">
+  Dive deep into the fascinating world of bioinformatics!
+Learn cutting-edge tools, techniques, and workflows with our step-by-step tutorials.
+Perfect for beginners and experts alike—fuel your curiosity and master the art of data science in biology.
+Subscribe now to explore, innovate, and lead the way in bioinformatics! 
+  </p>
+  <Link
+    href="https://www.youtube.com/@BioinfoCopilot"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block bg-dark text-light px-5 py-1.5 rounded-lg text-lg font-semibold hover:bg-transparent hover:text-dark border-2 border-dark 
+    dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light dark:border-light transition-colors md:p-2 md:px-4 md:text-base"
+  >
+    YouTube 
+  </Link>
+</section>
+          <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0 mt-16">
             <div className="col-span-12">
               <FeaturedProject
                 type="Drug Discovery"
