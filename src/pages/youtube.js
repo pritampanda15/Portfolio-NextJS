@@ -8,8 +8,8 @@ import Image from "next/image";
 import Link from "next/link";
 import proj1 from "../../public/images/youtube/nvidia.png";
 import proj2 from "../../public/images/projects/Structufy.png";
-import proj3 from "../../public/images/projects/step.png";
 import proj4 from "../../public/images/youtube/autodock.png";
+import proj3 from "../../public/images/youtube/MDsimulation2.png";
 import proj5 from "../../public/images/projects/siesta.png";
 import proj6 from "../../public/images/projects/ngs.jpg";
 import TransitionEffect from "@/components/TransitionEffect";
@@ -183,7 +183,7 @@ export default function Projects() {
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
-                type="Featured Video"
+                type="Drug Discovery"
                 title="Nvidia Generative AI for Docking & Virtual Screening"
                 summary="NVIDIA BioNeMo microservices enable a new generative screening paradigm. DiffDock is a diffusion generative model for drug discovery in molecular blind docking."
                 img={proj1}
@@ -191,27 +191,10 @@ export default function Projects() {
                 github="https://github.com/gcorso/DiffDock"
               />
             </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Drug Designing tool"
-                title="Molecular Docking for Beginners | Autodock Full Tutorial"
-                img={proj2}
-                link="https://structify-chemical-converter-f735c2cc4ea3.herokuapp.com"
-                github="https://github.com/pritampanda15/Structify-Chemical-Structure-Converter"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Molecular Dynamics Tool"
-                title="GROMACS-StepWizard"
-                img={proj3}
-                link="https://gromacs-stepwizard-7e3791398062.herokuapp.com"
-                github="https://github.com/pritampanda15/GROMACS-StepWizard"
-              />
-            </div>
+            
             <div className="col-span-12">
               <FeaturedProject
-                type="Molecular Dynamics"
+                type="Drug Discovery"
                 title="Molecular Docking for Beginners | Autodock Full Tutorial"
                 summary="This tutorial will introduce you to docking using the AutoDock suite of programs. "
                 img={proj4}
@@ -219,24 +202,27 @@ export default function Projects() {
                 github="https://github.com/pritampanda15/Drug-Designing"
               />
             </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Quantum Physics"
-                img={proj5}
-                title="Siesta"
-                link="https://github.com/pritampanda15/Siesta/blob/master/relax.fdf"
-                github="https://github.com/pritampanda15/Siesta"
+
+            <div className="col-span-12">
+              <FeaturedProject
+                type="Molecular Dynamics Simulations"
+                title="Molecular Dynamics Simulation of Protein-Ligand using Gromacs"
+                summary="This tutorial focuses specifically on issues related to dealing with the ligand, assuming that the user is familiar with basic GROMACS operations and the contents of a topology.  "
+                img={proj3}
+                link=" https://www.youtube.com/watch?v=hc8ZXbOMEfw&list=PLS3KFDv2o0CQIvkKuL7kU2rfowWIfHFFN&index=6"
+                github="https://github.com/pritampanda15/Molecular-Dynamics"
               />
             </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="NGS"
-                img={proj6}
-                title="WES Pipeline"
-                link="https://github.com/pritampanda15/NGS-Workflows/tree/main/WholeExomeSequencing-Pipeline-main"
-                github="https://github.com/pritampanda15/NGS-Workflows/tree/main"
-              />
-            </div>
+
+
+
+
+
+
+
+
+
+
           </div>
         </Layout>
       </main>
