@@ -8,7 +8,7 @@ import blog3 from "../../public/images/blogs/skin.jpeg";
 import blog4 from "../../public/images/blogs/global.png";
 import blog5 from "../../public/images/blogs/otv.png";
 import blog6 from "../../public/images/blogs/bioinfoskills.png";
-import blog7 from "../../public/images/articles/What is Redux with easy explanation.png";
+import blog7 from "../../public/images/blogs/googlescholar.png";
 import blog8 from "../../public/images/articles/What is higher order component in React.jpg";
 
 import Layout from "@/components/Layout";
@@ -150,13 +150,30 @@ export default function Articles() {
       link="https://medium.com/@pritampkp15/bioinformatics-skills-required-in-2024-170cc08e37e7"
     />
 
-    
+<FeaturedArticle
+      img={blog7}
+      title="My h-index just hit the big 40! "
+      time="Google Scholar"
+      summary="Apparently, Google Scholar thinks I am aging like fine wine in the world of citations. 🍷📖 For those who do not speak academic, this means my research is officially 40 times more popular than I ever was in high school. 😅
+A huge shoutout to my brilliant collaborators, curious readers, and all those who thought my work was worth citing (or even skimming). You have made this nerd’s dream come true. 🤓✨
+Heres to more ideas, more collaboration, and maybe even reaching the h-index equivalent of a mid-life crisis. 🏆 Cheers & keep on citing! 🤩"
+      link="https://scholar.google.com/citations?user=H2ggrzQAAAAJ&hl=en"
+    />
+
     <FeaturedArticle
       img={blog2}
       title="My Journey with Nextflow: From Exploration to Automation"
       time="Nextflow Blog"
       summary="I approach bioinformatics workflows in a whole different way now that I’ve used Nextflow. It has evolved into a vital tool in my toolbox, capable of handling massive genomic datasets ensuring repeatability and scalability. "
       link="https://seqera.io/blog/journey-from-exploration-to-automation/"
+    />
+
+<FeaturedArticle
+      img={blog3}
+      title="How Do Chemical Peels Disrupt or Enhance the Skin Microbiome?"
+      time="Sequential - The Skin Microbiome Testing Co™"
+      summary="Chemical peels are dermatological procedures that involve applying a chemical solution to the skin, thereby exfoliating the top layers to allow cell turnover and enhance skin texture and tone. The process involves using different types of acids or chemical agents that can vary in strength, leading to varying depths of peel, from superficial to deep. The procedure needs to be carried out more than once to get beneficial results, and recent research has begun to explore their impact on the skin microbiome."
+      link="https://www.sequential.bio/post/how-do-chemical-peels-disrupt-or-enhance-the-skin-microbiome"
     />
   </ul>
 
@@ -165,13 +182,7 @@ export default function Articles() {
 
   {/* Second set of articles */}
   <ul className="grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16">
-    <FeaturedArticle
-      img={blog3}
-      title="How Do Chemical Peels Disrupt or Enhance the Skin Microbiome?"
-      time="Sequential - The Skin Microbiome Testing Co™"
-      summary="Chemical peels are dermatological procedures that involve applying a chemical solution to the skin, thereby exfoliating the top layers to allow cell turnover and enhance skin texture and tone. The process involves using different types of acids or chemical agents that can vary in strength, leading to varying depths of peel, from superficial to deep. The procedure needs to be carried out more than once to get beneficial results, and recent research has begun to explore their impact on the skin microbiome."
-      link="https://www.sequential.bio/post/how-do-chemical-peels-disrupt-or-enhance-the-skin-microbiome"
-    />
+    
     <FeaturedArticle
       img={blog4}
       title="The defiant dreamer: The bioinformatics expert’s journey from Odisha to Europe"
@@ -200,6 +211,8 @@ export default function Articles() {
       summary="I actively promote the adoption of Nextflow for scalable and reproducible data analysis pipelines. I collaborate with the community to share best practices and drive innovation in workflow management."
       link="https://www.nextflow.io/our_ambassadors.html"
     />
+
+
   </ul>
 </Layout>
 
