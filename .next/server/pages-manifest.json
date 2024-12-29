@@ -2,5 +2,14 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/blogs": "pages/blogs.js"
+  "/404": "pages/404.js",
+  "/about": "pages/about.js",
+  "/api/hello": "pages/api/hello.js",
+  "/api/news": "pages/api/news.js",
+  "/api/scholar-metrics": "pages/api/scholar-metrics.js",
+  "/articles": "pages/articles.js",
+  "/blogs": "pages/blogs.js",
+  "/": "pages/index.js",
+  "/projects": "pages/projects.js",
+  "/youtube": "pages/youtube.js"
 }
