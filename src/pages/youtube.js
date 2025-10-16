@@ -192,7 +192,7 @@ Perfect for beginners and experts alike—fuel your curiosity and master the art
 Subscribe now to explore, innovate, and lead the way in bioinformatics! 
   </p>
   <Link
-    href="https://www.youtube.com/@BioinfoCopilot"
+    href="https://www.youtube.com/@Omixium_ai"
     target="_blank"
     rel="noopener noreferrer"
     className="inline-block bg-dark text-light px-5 py-1.5 rounded-lg text-lg font-semibold hover:bg-transparent hover:text-dark border-2 border-dark 
@@ -208,7 +208,7 @@ Subscribe now to explore, innovate, and lead the way in bioinformatics!
                 title="Nvidia Generative AI for Docking & Virtual Screening"
                 summary="NVIDIA BioNeMo microservices enable a new generative screening paradigm. DiffDock is a diffusion generative model for drug discovery in molecular blind docking."
                 img={proj1}
-                link="https://www.youtube.com/watch?v=AsmQhvFAS80"
+                link="https://youtu.be/x__K01Ei_3s?si=xU_7PAX_pzpiAEPg"
                 github="https://github.com/gcorso/DiffDock"
               />
             </div>
@@ -219,7 +219,7 @@ Subscribe now to explore, innovate, and lead the way in bioinformatics!
                 title="Molecular Docking for Beginners | Autodock Full Tutorial"
                 summary="This tutorial will introduce you to docking using the AutoDock suite of programs. "
                 img={proj2}
-                link=" https://www.youtube.com/watch?v=ZVKKsK5DsCY&t=5374s"
+                link=" https://youtu.be/b2XmnCNwI_4?si=aXA_sbOGEpkpoA9o"
                 github="https://github.com/pritampanda15/Drug-Designing"
               />
             </div>
@@ -230,7 +230,7 @@ Subscribe now to explore, innovate, and lead the way in bioinformatics!
                 title="Molecular Dynamics Simulation of Protein-Ligand using Gromacs"
                 summary="This tutorial focuses specifically on issues related to dealing with the ligand, assuming that the user is familiar with basic GROMACS operations and the contents of a topology.  "
                 img={proj3}
-                link=" https://www.youtube.com/watch?v=hc8ZXbOMEfw&list=PLS3KFDv2o0CQIvkKuL7kU2rfowWIfHFFN&index=6"
+                link="https://youtu.be/VJOmX9ik9RA?si=9kpoTNco2jR3xfNz"
                 github="https://github.com/pritampanda15/Molecular-Dynamics"
               />
             </div>
@@ -241,7 +241,7 @@ Subscribe now to explore, innovate, and lead the way in bioinformatics!
                 type="Drug Designing"
                 img={proj4}
                 title="Molecular Docking Playlist"
-                link="https://www.youtube.com/watch?v=j6gRyBHn2JU&list=PLS3KFDv2o0CR327JLYQvAN7WI59GqdwPU&pp=gAQB"
+                link="https://www.youtube.com/watch?v=0o6_TTWeABo&list=PLLqKUt0cCFZ6qO-pIaZDsAkEqn9myVKng"
                 github="https://github.com/pritampanda15/Drug-Designing"
               />
             </div>
@@ -251,7 +251,7 @@ Subscribe now to explore, innovate, and lead the way in bioinformatics!
                 type="Molecular Dynamics Simulation"
                 img={proj5}
                 title="Molecular Dynamics Simulation Playlist"
-                link="https://www.youtube.com/watch?v=27lf1qLP7QU&list=PLS3KFDv2o0CQIvkKuL7kU2rfowWIfHFFN&pp=gAQB"
+                link="https://www.youtube.com/watch?v=xHNDuLBEnKk&list=PLLqKUt0cCFZ4u4SdJ27HKpSn1XxeNYC9I"
                 github="https://github.com/pritampanda15/Molecular-Dynamics"
               />
             </div>
@@ -260,19 +260,19 @@ Subscribe now to explore, innovate, and lead the way in bioinformatics!
               <Project
                 type="NGS"
                 img={proj6}
-                title="Nextflow Playlist"
-                link="https://www.youtube.com/watch?v=7fIY0kV9x6o&list=PLS3KFDv2o0CQxUuyAMyYdp_PoiVbdSa_8&pp=gAQB"
+                title="Multiomics"
+                link="https://www.youtube.com/watch?v=6P5JZINJ4pg&list=PLLqKUt0cCFZ7pMfqmcTvcc7EMlaVvHIvO"
                 github="https://github.com/pritampanda15/NGS-Workflows"
               />
             </div>
 
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="NGS"
+                type="ML"
                 img={proj7}
-                title="Next-Gen Sequencing Tools"
-                link="https://www.youtube.com/watch?v=XstXZrCtpB4&list=PLS3KFDv2o0CTIHjh-6lp7qgrqgcDvswvG&pp=gAQB"
-                github="https://github.com/pritampanda15/NGS-Workflows"
+                title="Machine Learning"
+                link="https://www.youtube.com/watch?v=Guphxo3kG-c&list=PLLqKUt0cCFZ5ZLw7Jb7XAR8sPz86We-hO"
+                github="https://github.com/pritampanda15/Omixium_YouTube_Channel"
               />
             </div>
 
@@ -280,8 +280,8 @@ Subscribe now to explore, innovate, and lead the way in bioinformatics!
               <Project
                 type="Proteomics"
                 img={proj8}
-                title="Flow Cytometry Analysis"
-                link="https://www.youtube.com/watch?v=9OGWdYiBoO0&list=PLS3KFDv2o0CTgxt_aKQZNHPYeb95qJvhR&pp=gAQB"
+                title="R Packages"
+                link="https://www.youtube.com/watch?v=coXAwhlgcDA&list=PLLqKUt0cCFZ6N22ccmW4T__ZBCPFyVHRr"
                 github="https://github.com/pritampanda15/Proteomics"
               />
             </div>
@@ -290,8 +290,8 @@ Subscribe now to explore, innovate, and lead the way in bioinformatics!
               <Project
                 type="Quantum Physics"
                 img={proj9}
-                title="Siesta & Transiesta"
-                link="https://www.youtube.com/watch?v=VcqnYwb4kws&list=PLS3KFDv2o0CTV8bJ9clpDW4I-CReFSKG-&pp=gAQB"
+                title="DFT"
+                link="https://www.youtube.com/watch?v=tJpa8PRcs0Q&list=PLLqKUt0cCFZ5ulEYjms3vrVaafJ_dXHZ8"
                 github="https://github.com/pritampanda15/Siesta"
               />
             </div>
