@@ -1,6 +1,13 @@
 // /pages/api/news.js
 export default function handler(req, res) {
   const newsData = [
+    {
+      title: "PandaDock - Physics-Based Molecular Docking Platform",
+      img: "/images/news/PandaDock.png",
+      time: "Dec 2025",
+      link: "https://github.com/pritampanda15/PandaDock",
+      type: "Molecular Docking",
+    },
 
     {
       title: "Literature Intelligence - Scientific Paper Tracking & Analysis",
