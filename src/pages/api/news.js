@@ -2,6 +2,13 @@
 export default function handler(req, res) {
   const newsData = [
     {
+      title: "AI Glossary - Interactive Learning Platform for AI/ML Concepts",
+      img: "/images/news/AI.png",
+      time: "Dec 28, 2025",
+      link: "https://github.com/pritampanda15/AI-glossary",
+      type: "AI/ML Education",
+    },
+    {
       title: "PandaDock - Physics-Based Molecular Docking Platform",
       img: "/images/news/PandaDock.png",
       time: "Dec 2025",
