@@ -1,3 +1,95 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #888888 #0a0a0a;
+  }
+
+  body {
+    @apply bg-bg text-ink font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: #c8ff00;
+    color: #0a0a0a;
+  }
+
+  /* Film-grain overlay — sits above everything, never intercepts clicks. */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Uppercase mono eyebrow used above every section heading. */
+  .label {
+    @apply font-mono text-[11px] uppercase tracking-label text-accent;
+  }
+
+  .label-muted {
+    @apply font-mono text-[11px] uppercase tracking-label text-muted;
+  }
+
+  /* Hairline-bordered surface. No radius, no shadow — the template's core card. */
+  .surface {
+    @apply border border-line bg-card transition-colors duration-300;
+  }
+
+  .surface-hover {
+    @apply hover:bg-elevated;
+  }
+
+  /* Accent rule that wipes in on hover — used on every interactive card. */
+  .wipe {
+    @apply relative;
+  }
+  .wipe::before {
+    content: "";
+    @apply absolute left-0 top-0 h-px w-full origin-left scale-x-0 bg-accent transition-transform duration-500;
+  }
+  .wipe:hover::before {
+    @apply scale-x-100;
+  }
+
+  .link-underline {
+    @apply relative inline-block text-ink transition-colors duration-300 hover:text-accent;
+  }
+
+  /* Solid accent button. */
+  .btn {
+    @apply inline-flex items-center gap-2 border border-accent bg-accent px-6 py-3 font-mono text-xs uppercase
+      tracking-wide2 text-bg transition-colors duration-300 hover:bg-transparent hover:text-accent;
+  }
+
+  /* Ghost variant for secondary actions. */
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 border border-line bg-transparent px-6 py-3 font-mono text-xs uppercase
+      tracking-wide2 text-dim transition-colors duration-300 hover:border-accent hover:text-accent;
+  }
+
+  /* Blinking status dot. */
+  .status-dot {
+    @apply h-1.5 w-1.5 rounded-full bg-accent animate-blink;
+  }
+}

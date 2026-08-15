@@ -1,139 +1,201 @@
-import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
-import profile from "../../public/images/profile/Pritam.jpg";
-import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { useInView, useMotionValue, useSpring } from "framer-motion";
+import speaking from "../../public/images/profile/pritam-speaking.jpg";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
-import AnimatedText from "@/components/AnimatedText";
 import TransitionEffect from "@/components/TransitionEffect";
+import Marquee from "@/components/Marquee";
+import { PageHero, Label, Reveal, ArrowLink } from "@/components/Section";
 
-function AnimatedNumberFramerMotion({ value }) {
+function AnimatedNumber({ value }) {
   const ref = useRef(null);
   const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration: 3000 });
-  const isInView = useInView(ref, { once: true });
+  const spring = useSpring(motionValue, { duration: 3000 });
+  const inView = useInView(ref, { once: true });
+
   useEffect(() => {
-    if (isInView) {
-      motionValue.set(value);
-    }
-  }, [motionValue, value, isInView]);
+    if (inView) motionValue.set(value);
+  }, [motionValue, value, inView]);
 
   useEffect(
     () =>
-      springValue.on("change", (latest) => {
+      spring.on("change", (latest) => {
         if (ref.current && latest.toFixed(0) <= value) {
           ref.current.textContent = latest.toFixed(0);
         }
       }),
-    [springValue, value]
+    [spring, value]
   );
 
-  return <span ref={ref} />;
+  return <span ref={ref}>0</span>;
 }
+
+const COUNTERS = [
+  { value: 100, suffix: "+", label: "Publications" },
+  { value: 49, suffix: "", label: "h-index" },
+  { value: 50, suffix: "+", label: "Projects shipped" },
+  { value: 7, suffix: "+", label: "Years of research" },
+];
+
+const RECOGNITION = [
+  "Elected Member, Sigma Xi",
+  "Nextflow Ambassador",
+  "First Prize — Best Basic Science Abstract, Stanford (2026)",
+  "US patent WO2023217787",
+  "100+ peer reviews across 30+ journals",
+  "Invited speaker, 5+ international summits",
+];
 
 export default function About() {
   return (
     <>
       <Head>
-        <title>Pritam's Portfolio | About Page</title>
-        <meta name="description" content="Explore academic bioinformatics journey of Dr. Pritam Kumar Panda." />
+        <title>About — Pritam Kumar Panda</title>
+        <meta
+          name="description"
+          content="The academic and research background of Dr. Pritam Kumar Panda — computational biophysics, drug discovery, and reproducible bioinformatics infrastructure."
+        />
       </Head>
-      <TransitionEffect />
-      <main
-        className={`flex  w-full flex-col items-center justify-center dark:text-light`}
-      >
-        <Layout className="pt-16">
-          <AnimatedText
-            text="Passion Fuels Purpose!"
-            className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
-          />
 
-          <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
-            <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 
-            md:col-span-8">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                BIOGRAPHY
-              </h2>
-              <p className="font-medium ">
-                Hi, I&apos;m <strong>Pritam</strong>,  an accomplished bioinformatician and researcher 
-                specializing in drug design, molecular modeling, and AI-driven protein design, NGS, 
-                multimomics and workflow management. 
-                Originally from India and currently based in San Francisco, California, he holds a 
-                Ph.D. in Physics, specializing in Atomic, Molecular, and Condensed Matter Physics 
-                from Uppsala University in Sweden, where his research bridged quantum and 
-                biological phenomena. 
-                
+      <TransitionEffect />
+
+      <main className="w-full">
+        <PageHero
+          label="About"
+          title="Passion fuels"
+          accent="purpose."
+          lede="Bioinformatician and computational physicist working at the point where quantum-scale simulation, structural biology, and machine learning meet drug discovery."
+        />
+
+        {/* BIO + PORTRAIT */}
+        <section className="grid grid-cols-12 gap-16 px-12 py-32 lg:grid-cols-1 lg:gap-12 lg:px-8 lg:py-20 sm:px-6">
+          <Reveal className="col-span-7 lg:col-span-1">
+            <Label className="mb-8">Biography</Label>
+            <div className="space-y-6 text-base font-light leading-loose text-dim">
+              <p>
+                I&apos;m <strong className="font-normal text-ink">Pritam</strong>{" "}
+                — a bioinformatician and researcher specializing in drug design,
+                molecular modelling, AI-driven protein design, NGS, multi-omics,
+                and workflow management. Originally from Odisha, India, now based
+                in the Bay Area.
               </p>
-              <p className="my-4 font-medium">
-              Currently, I work as a Postdoctoral Scholar in the Department of Anesthesiology, 
-              Perioperative, and Pain Medicine at <strong>Stanford University School of Medicine</strong>. My current research is centered on designing novel anesthetics suitable for battlefield conditions. Leveraging AI-driven protein design and high-throughput virtual screening, 
-              I bring my expertise to accelerate the drug discovery process and develop effective anesthetic agents.
+              <p>
+                I hold a PhD in Physics from Uppsala University, specializing in
+                Atomic, Molecular and Condensed Matter Physics, where my research
+                bridged quantum and biological phenomena — culminating in
+                GENOME2QUNOME, a framework for interfacing molecules with
+                nanomaterials.
               </p>
-              <p className="font-medium">
-              Whether I'm working with genomic datasets, protein structures, or other bioinformatics challenges, 
-              I bring my commitment to analytical precision and data-driven problem-solving to every project I undertake.
+              <p>
+                Today I&apos;m a Postdoctoral Scholar in the Department of
+                Anesthesiology, Perioperative and Pain Medicine at{" "}
+                <strong className="font-normal text-ink">
+                  Stanford University School of Medicine
+                </strong>
+                , designing novel anesthetics suited to battlefield conditions.
+                The work combines AI-driven protein design with high-throughput
+                virtual screening to compress the discovery timeline.
+              </p>
+              <p>
+                Whether the input is a genomic dataset, a protein structure, or a
+                pipeline nobody can reproduce, the commitment is the same:
+                analytical precision and data you can trust.
               </p>
             </div>
-            <div className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark 
-            bg-light p-8 dark:border-light dark:bg-dark
-            xl:col-span-4 md:col-span-8 md:order-1
-            ">
-              <div
-                className="absolute  top-0 -right-3 -z-10 h-[103%] w-[102%]  rounded-[2rem] rounded-br-3xl 
-                bg-dark
-        dark:bg-light  "
-              />
+            <div className="mt-10">
+              <ArrowLink href="/CV.pdf" external>
+                Download résumé
+              </ArrowLink>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1} className="col-span-5 lg:col-span-1">
+            <figure className="border border-line p-3">
               <Image
-                className="h-auto w-full rounded-2xl"
-                src={profile}
-                alt="Codebucks"
-                sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+                src={speaking}
+                alt="Pritam Kumar Panda presenting at the Stanford Anesthesiology awards symposium"
+                className="h-auto w-full grayscale transition-all duration-700 hover:grayscale-0"
+                sizes="(max-width: 1023px) 100vw, 40vw"
                 priority
               />
+              <figcaption className="label-muted mt-3 px-1">
+                Stanford Anesthesiology research symposium, June 2026
+              </figcaption>
+            </figure>
+            <div className="mt-6 flex items-center gap-2">
+              <span className="status-dot" />
+              <span className="label-muted">Sunnyvale, California</span>
             </div>
-            <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row 
-            xl:items-center md:order-3">
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={100} />+
-                </span>
-                <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
-                xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  Publications
-                </h2>
-              </div>
+          </Reveal>
+        </section>
 
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={50} />+
-                </span>
-                <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
-                xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  Projects completed
-                </h2>
-              </div>
-
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={7} />+
-                </span>
-                <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
-                xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  Years of experience
-                </h2>
-              </div>
+        {/* AWARD */}
+        <section className="grid grid-cols-12 gap-16 border-t border-line px-12 pb-32 pt-24 lg:grid-cols-1 lg:gap-6 lg:px-8 lg:pb-20 sm:px-6">
+          <Reveal className="col-span-4 lg:col-span-1">
+            <Label className="mb-6">Recent honour</Label>
+            <h2 className="font-serif text-[clamp(26px,2.8vw,40px)] italic leading-tight">
+              First prize, Best Basic Science Abstract.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1} className="col-span-7 col-start-6 lg:col-span-1 lg:col-start-1">
+            <p className="max-w-2xl text-base font-light leading-relaxed text-dim">
+              Awarded a Research Award for Best Basic Science Abstract by the
+              Department of Anesthesiology, Perioperative and Pain Medicine at
+              Stanford University School of Medicine, for the poster presentation
+              on AI-driven anesthetic design — June 1, 2026.
+            </p>
+            <div className="mt-8 flex items-center gap-2">
+              <span className="status-dot" />
+              <span className="label-muted">
+                Stanford University School of Medicine
+              </span>
             </div>
-          </div>
+          </Reveal>
+        </section>
 
+        {/* COUNTERS */}
+        <section className="grid grid-cols-4 border-y border-line lg:grid-cols-2">
+          {COUNTERS.map((c) => (
+            <div
+              key={c.label}
+              className="border-r border-line px-12 py-14 last:border-r-0 lg:px-8 lg:py-10 sm:px-6"
+            >
+              <p className="font-mono text-5xl font-light text-accent sm:text-4xl">
+                <AnimatedNumber value={c.value} />
+                {c.suffix}
+              </p>
+              <p className="label-muted mt-4">{c.label}</p>
+            </div>
+          ))}
+        </section>
+
+        <div className="py-32 lg:py-20">
           <Skills />
           <Experience />
           <Education />
-        </Layout>
+
+          {/* RECOGNITION */}
+          <section className="px-12 lg:px-8 sm:px-6">
+            <Reveal>
+              <Label className="mb-8">Recognition</Label>
+              <ul className="grid grid-cols-3 gap-px border border-line bg-line lg:grid-cols-2 sm:grid-cols-1">
+                {RECOGNITION.map((r) => (
+                  <li
+                    key={r}
+                    className="bg-bg px-8 py-10 text-sm font-light leading-relaxed text-dim transition-colors hover:bg-elevated hover:text-accent"
+                  >
+                    {r}
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          </section>
+        </div>
+
+        <Marquee />
       </main>
     </>
   );
