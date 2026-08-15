@@ -1,79 +1,70 @@
 /** @type {import('tailwindcss').Config} */
-const { fontFamily } = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
-    // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
-        mont: ["var(--font-mont)", ...fontFamily.sans],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui"],
+        serif: ["var(--font-serif)", "ui-serif", "Georgia", "serif"],
       },
       colors: {
-        dark: "#1b1b1b",
-        light: "#f5f5f5",
-        primary: "#B63E96", // 240,86,199 #F056C7
-        primaryDark: "#58E6D9", // 80,230,217
+        bg: "#0a0a0a",
+        elevated: "#111111",
+        card: "#161616",
+        line: "#222222",
+        ink: "#ffffff",
+        dim: "#c8c8c8",
+        muted: "#888888",
+        accent: "#c8ff00",
+        accentDim: "#a3cc00",
       },
-      animation: {
-        "spin-slow": "spin 8s linear infinite",
+      letterSpacing: {
+        label: "0.2em",
+        wide2: "0.125em",
+      },
+      maxWidth: {
+        prose: "72ch",
       },
       backgroundImage: {
-        circularLight:
-          "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 100px)",
-        circularDark:
-          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px,#1b1b1b 100px)",
-        circularLightLg:
-          "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 80px)",
-
-        circularDarkLg:
-          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px,#1b1b1b 80px)",
-        circularLightMd:
-          "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 60px)",
-
-        circularDarkMd:
-          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px,#1b1b1b 60px)",
-
-        circularLightSm:
-          "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 40px)",
-
-        circularDarkSm:
-          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px,#1b1b1b 40px)",
+        // faint accent graph-paper grid used behind heroes
+        grid: `linear-gradient(rgba(200,255,0,0.03) 1px, transparent 1px),
+               linear-gradient(90deg, rgba(200,255,0,0.03) 1px, transparent 1px)`,
       },
-      boxShadow: {
-        "3xl": "0 15px 15px 1px rgba(80,230,217, 0.4)",
+      keyframes: {
+        fadeUp: {
+          from: { opacity: "0", transform: "translateY(24px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
+        blink: { "0%,100%": { opacity: "1" }, "50%": { opacity: "0.25" } },
+        pulseLine: { "0%,100%": { opacity: "1" }, "50%": { opacity: "0.3" } },
+      },
+      animation: {
+        fadeUp: "fadeUp 0.8s ease forwards",
+        marquee: "marquee 32s linear infinite",
+        blink: "blink 2s ease infinite",
+        pulseLine: "pulseLine 2s ease infinite",
       },
     },
+    // NOTE: max-width breakpoints — `md:` means "at most 767px".
     screens: {
       "2xl": { max: "1535px" },
-      // => @media (max-width: 1535px) { ... }
-
       xl: { max: "1279px" },
-      // => @media (max-width: 1279px) { ... }
-
       lg: { max: "1023px" },
-      // => @media (max-width: 1023px) { ... }
-
       md: { max: "767px" },
-      // => @media (max-width: 767px) { ... }
-
       sm: { max: "639px" },
-      // => @media (max-width: 639px) { ... }
-
       xs: { max: "479px" },
-      // => @media (max-width: 479px) { ... }
     },
   },
-  plugins: [
-    function ({ addVariant }) {
-      addVariant("child", "& > *");
-      addVariant("child-hover", "& > *:hover");
-    },
-  ],
+  plugins: [],
 };

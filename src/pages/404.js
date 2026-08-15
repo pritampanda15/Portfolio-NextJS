@@ -1,43 +1,50 @@
-import AnimatedText from "@/components/AnimatedText";
-import Layout from "@/components/Layout";
-import TransitionEffect from "@/components/TransitionEffect";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
+import TransitionEffect from "@/components/TransitionEffect";
+import { Label } from "@/components/Section";
 
-const NotFound = () => {
-  return (
-    <>
-      <Head>
-        <title>Awesome Portfolio Built with Nextjs | 404 Page </title>
-        <meta
-          name="description"
-          content="Explore CodeBucks's Next.js developer portfolio and 
-        discover the latest webapp projects and software engineering articles. 
-        Showcase your skills as a full-stack developer and software engineer."
-        />
-      </Head>
-      <TransitionEffect />
-      <main className="h-[75vh] w-full dark:bg-dark ">
-        <Layout className="relative !bg-transparent !pt-16 flex flex-col items-center justify-center">
-          <AnimatedText text="404" className=" " />
-          <AnimatedText
-            text="Page Not Found."
-            className=" !text-7xl "
-          />
-          <Link
-            href="/"
-            className="self-center !mt-4 inline-block rounded-lg border-2 border-solid bg-dark px-4 py-2
-        font-semibold text-light hover:border-dark hover:bg-light hover:text-dark 
-        dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light
-        "
-          >
-            Go To Home
+const NotFound = () => (
+  <>
+    <Head>
+      <title>404 — Pritam Kumar Panda</title>
+      <meta name="description" content="This page could not be found." />
+    </Head>
+
+    <TransitionEffect />
+
+    <main className="relative flex min-h-[80vh] w-full items-center overflow-hidden px-12 py-32 lg:px-8 sm:px-6">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-grid"
+        style={{
+          backgroundSize: "60px 60px",
+          maskImage:
+            "radial-gradient(ellipse at 30% 50%, black 0%, transparent 70%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse at 30% 50%, black 0%, transparent 70%)",
+        }}
+      />
+      <div className="relative">
+        <Label className="mb-8">Error 404</Label>
+        <h1 className="font-mono text-[clamp(64px,14vw,180px)] font-light leading-none tracking-[-0.05em]">
+          404
+        </h1>
+        <p className="mt-8 max-w-lg font-serif text-3xl italic leading-tight text-dim sm:text-2xl">
+          This conformation doesn&apos;t exist.
+        </p>
+        <p className="mt-6 max-w-lg text-base font-light leading-relaxed text-muted">
+          The page you were looking for has moved, been renamed, or never
+          existed in the first place.
+        </p>
+        <div className="mt-12">
+          <Link href="/" className="btn">
+            Back to home
           </Link>
-        </Layout>
-      </main>
-    </>
-  );
-};
+        </div>
+      </div>
+    </main>
+  </>
+);
 
 export default NotFound;

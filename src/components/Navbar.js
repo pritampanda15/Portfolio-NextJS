@@ -1,269 +1,171 @@
 import Link from "next/link";
-import React, { useState } from "react";
-import Logo from "./Logo";
 import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
-  GoogleScholarIcon,
+  ScholarIcon,
   GithubIcon,
   LinkedInIcon,
-  MoonIcon,
   BlueskyIcon,
-  SunIcon,
   TwitterIcon,
-} from "./Icons";
-import { motion } from "framer-motion";
-import { useThemeSwitch } from "./Hooks/useThemeSwitch";
+} from "./SocialIcons";
 
-const CustomLink = ({ href, title, className = "" }) => {
+export const NAV_LINKS = [
+  { href: "/", title: "Home" },
+  { href: "/about", title: "About" },
+  { href: "/projects", title: "Projects" },
+  { href: "/articles", title: "Publications" },
+  { href: "/youtube", title: "YouTube" },
+  { href: "/blogs", title: "Blogs" },
+];
+
+const SOCIALS = [
+  { href: "https://github.com/pritampanda15", label: "GitHub", Icon: GithubIcon },
+  {
+    href: "https://www.linkedin.com/in/pritam-kumar-panda/",
+    label: "LinkedIn",
+    Icon: LinkedInIcon,
+  },
+  {
+    href: "https://scholar.google.com/citations?user=H2ggrzQAAAAJ&hl=en",
+    label: "Google Scholar",
+    Icon: ScholarIcon,
+  },
+  { href: "https://twitter.com/pritamkpanda", label: "X", Icon: TwitterIcon },
+  {
+    href: "https://bsky.app/profile/pritampkp15.bsky.social",
+    label: "Bluesky",
+    Icon: BlueskyIcon,
+  },
+];
+
+const NavLink = ({ href, title, onClick }) => {
   const router = useRouter();
+  const active = router.asPath === href;
 
   return (
-    <Link href={href} className={`${className}  rounded relative group lg:text-light lg:dark:text-dark`}>
+    <Link
+      href={href}
+      onClick={onClick}
+      className={`font-mono text-xs uppercase tracking-wide2 transition-colors duration-300 hover:text-accent ${
+        active ? "text-accent" : "text-ink"
+      }`}
+    >
       {title}
-      <span
-        className={`
-              inline-block h-[1px]  bg-dark absolute left-0 -bottom-0.5 
-              group-hover:w-full transition-[width] ease duration-300 dark:bg-light
-              ${router.asPath === href ? "w-full" : " w-0"} lg:bg-light lg:dark:bg-dark
-              `}
-      >
-        &nbsp;
-      </span>
     </Link>
   );
 };
 
-const CustomMobileLink = ({ href, title, className = "", toggle }) => {
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
   const router = useRouter();
 
-  const handleClick = () =>{
-    toggle();
-    router.push(href) 
-  }
+  // Close the drawer on navigation and lock scroll while it's open.
+  useEffect(() => setOpen(false), [router.asPath]);
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   return (
-    <button className={`${className}  rounded relative group lg:text-light lg:dark:text-dark`} onClick={handleClick}>
-      {title}
-      <span
-        className={`
-              inline-block h-[1px]  bg-dark absolute left-0 -bottom-0.5 
-              group-hover:w-full transition-[width] ease duration-300 dark:bg-light
-              ${router.asPath === href ? "w-full" : " w-0"} lg:bg-light lg:dark:bg-dark
-              `}
-      >
-        &nbsp;
-      </span>
-    </button>
-  );
-};
-
-
-
-const Navbar = () => {
-  const [mode, setMode] = useThemeSwitch();
-    const [isOpen, setIsOpen] = useState(false);
-
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
-
-
-
-  return (
-    <header className="w-full flex items-center justify-between px-32 py-8 font-medium z-10 dark:text-light
-    lg:px-16 relative z-1 md:px-12 sm:px-8
-    ">
-      
-      <button
-        type="button"
-        className=" flex-col items-center justify-center hidden lg:flex"
-        aria-controls="mobile-menu"
-        aria-expanded={isOpen}
-        onClick={handleClick}
-      >
-        <span className="sr-only">Open main menu</span>
-        <span className={`bg-dark dark:bg-light block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
-        <span className={`bg-dark dark:bg-light block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${isOpen ? 'opacity-0' : 'opacity-100'} my-0.5`}></span>
-        <span className={`bg-dark dark:bg-light block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
-      </button>
-
-      <div className="w-full flex justify-between items-center lg:hidden"
-      >
-      <nav className="flex items-center justify-center">
-        <CustomLink className="mr-4" href="/" title="Home" />
-        <CustomLink className="mx-4" href="/about" title="About" />
-        <CustomLink className="mx-4" href="/projects" title="Projects" />
-        <CustomLink className="ml-4" href="/articles" title="Publications" />
-        <CustomLink className="ml-4" href="/youtube" title="YouTube" />
-        <CustomLink className="ml-4" href="/blogs" title="Blogs" />
-      </nav>
-      <nav
-        className="flex items-center justify-center flex-wrap lg:mt-2
-      "
-      >
-        <motion.a
-          target={"_blank"}
-          className="w-6 mr-3"
-          href="https://twitter.com/pritamkpanda"
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          aria-label="Checkout my twitter profile"
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-bg/80 backdrop-blur-xl">
+      <div className="flex items-center justify-between px-12 py-5 lg:px-8 sm:px-6">
+        <Link
+          href="/"
+          className="font-mono text-sm uppercase tracking-wide2 text-ink transition-colors hover:text-accent"
+          aria-label="Home"
         >
-          <TwitterIcon />
-        </motion.a>
-        <motion.a
-          target={"_blank"}
-          className="w-6 mx-3"
-          href="https://github.com/pritampanda15"
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          aria-label="Checkout my github profile"
-        >
-          <GithubIcon />
-        </motion.a>
-        <motion.a
-          target={"_blank"}
-          className="w-6 mx-3"
-          href="https://www.linkedin.com/in/pritam-kumar-panda/"
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          aria-label="Checkout my linkedin profile"
-        >
-          <LinkedInIcon />
-        </motion.a>
-        <motion.a
-          target={"_blank"}
-          className="w-6 mx-3 bg-light rounded-full"
-          href="https://bsky.app/profile/pritampkp15.bsky.social"
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          aria-label="Checkout my bluesky profile"
-        >
-          <BlueskyIcon />
-        </motion.a>
-        <motion.a
-          target={"_blank"}
-          className="w-6 mx-3"
-          href="https://scholar.google.com/citations?user=H2ggrzQAAAAJ&hl=en"
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          aria-label="Checkout my google scholar profile"
-        >
-          <GoogleScholarIcon />
-        </motion.a>
+          PKP<span className="text-accent">.</span>
+        </Link>
 
+        <nav className="flex items-center gap-8 lg:hidden">
+          {NAV_LINKS.map((l) => (
+            <NavLink key={l.href} {...l} />
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-5 lg:hidden">
+          {SOCIALS.map(({ href, label, Icon }) => (
+            <motion.a
+              key={href}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.92 }}
+              className="h-[18px] w-[18px] text-muted transition-colors hover:text-accent"
+            >
+              <Icon />
+            </motion.a>
+          ))}
+          <Link
+            href="mailto:pritam@stanford.edu"
+            className="border border-accent bg-accent px-5 py-2 font-mono text-[11px] uppercase tracking-wide2 text-bg transition-colors duration-300 hover:bg-transparent hover:text-accent"
+          >
+            Get in touch
+          </Link>
+        </div>
+
+        {/* Hamburger — visible at ≤1023px */}
         <button
-          onClick={() => setMode(mode === "light" ? "dark" : "light")}
-          className={`w-6 h-6 ease ml-3 flex items-center justify-center rounded-full p-1  
-            ${mode === "light" ? "bg-dark  text-light" : "bg-light  text-dark"}
-            `}
-          aria-label="theme-switcher"
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-label="Toggle menu"
+          aria-expanded={open}
+          className="hidden flex-col justify-center gap-[5px] lg:flex"
         >
-          {mode === "light" ? (
-            <SunIcon className={"fill-dark"} />
-          ) : (
-            <MoonIcon className={"fill-dark"} />
-          )}
+          <span
+            className={`block h-px w-6 bg-ink transition-all duration-300 ${
+              open ? "translate-y-[6px] rotate-45" : ""
+            }`}
+          />
+          <span
+            className={`block h-px w-6 bg-ink transition-all duration-300 ${
+              open ? "opacity-0" : "opacity-100"
+            }`}
+          />
+          <span
+            className={`block h-px w-6 bg-ink transition-all duration-300 ${
+              open ? "-translate-y-[6px] -rotate-45" : ""
+            }`}
+          />
         </button>
-      </nav>
       </div>
-    {
-      isOpen ? 
 
-      <motion.div className="min-w-[70vw] sm:min-w-[90vw] flex justify-between items-center flex-col fixed top-1/2 left-1/2 -translate-x-1/2
-      -translate-y-1/2
-      py-32 bg-dark/90 dark:bg-light/75 rounded-lg z-50 backdrop-blur-md
-      "
-      initial={{scale:0,x:"-50%",y:"-50%", opacity:0}}
-      animate={{scale:1,opacity:1}}
-      >
-      <nav className="flex items-center justify-center flex-col">
-        <CustomMobileLink toggle={handleClick} className="mr-4 lg:m-0 lg:my-2" href="/" title="Home" />
-        <CustomMobileLink toggle={handleClick} className="mx-4 lg:m-0 lg:my-2" href="/about" title="About" />
-        <CustomMobileLink toggle={handleClick} className="mx-4 lg:m-0 lg:my-2" href="/projects" title="Projects" />
-        <CustomMobileLink toggle={handleClick} className="ml-4 lg:m-0 lg:my-2" href="/articles" title="Publications" />
-        <CustomMobileLink toggle={handleClick} className="ml-4 lg:m-0 lg:my-2" href="/youtube" title="YouTube" />
-        <CustomMobileLink toggle={handleClick} className="ml-4 lg:m-0 lg:my-2" href="/blogs" title="Blogs" />
-      </nav>
-      <nav
-        className="flex items-center justify-center  mt-2
-      "
-      >
-        <motion.a
-          target={"_blank"}
-          className="w-6 m-1 mr-3 sm:mx-1"
-          href="https://twitter.com/pritamkpanda"
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          aria-label="Checkout my twitter profile"
-        >
-          <TwitterIcon />
-        </motion.a>
-        <motion.a
-          target={"_blank"}
-          className="w-6 m-1 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1"
-          href="https://github.com/pritampanda15"
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          aria-label="Checkout my github profile"
-        >
-          <GithubIcon />
-        </motion.a>
-        <motion.a
-          target={"_blank"}
-          className="w-6 m-1 mx-3 sm:mx-1"
-          href="https://www.linkedin.com/in/pritam-kumar-panda/"
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          aria-label="Checkout my linkedin profile"
-        >
-          <LinkedInIcon />
-        
-          </motion.a>
-        <motion.a
-          target={"_blank"}
-          className="w-6 m-1 mx-3 bg-light rounded-full sm:mx-1"
-          href="https://bsky.app/profile/pritampkp15.bsky.social"
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          aria-label="Checkout my bluesky profile"
-        >
-          <BlueskyIcon />
-
-        </motion.a>
-        <motion.a
-          target={"_blank"}
-          className="w-6 m-1 mx-3 sm:mx-1"
-          href="https://scholar.google.com/citations?user=H2ggrzQAAAAJ&hl=en"
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          aria-label="Checkout my dribbble profile"
-        >
-          <GoogleScholarIcon />
-        </motion.a>
-
-        <button
-          onClick={() => setMode(mode === "light" ? "dark" : "light")}
-          className={`w-6 h-6 ease m-1 ml-3 sm:mx-1 flex items-center justify-center rounded-full p-1  
-            ${mode === "light" ? "bg-dark  text-light" : "bg-light  text-dark"}
-            `}
-          aria-label="theme-switcher"
-        >
-          {mode === "light" ? (
-            <SunIcon className={"fill-dark"} />
-          ) : (
-            <MoonIcon className={"fill-dark"} />
-          )}
-        </button>
-      </nav>
-      </motion.div>
-
-      : null
-    }
-
-      <div className="absolute left-[50%] top-2 translate-x-[-50%] ">
-        <Logo />
-      </div>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="hidden border-t border-line bg-bg px-8 py-10 sm:px-6 lg:block"
+          >
+            <nav className="flex flex-col gap-6">
+              {NAV_LINKS.map((l) => (
+                <NavLink key={l.href} {...l} onClick={() => setOpen(false)} />
+              ))}
+            </nav>
+            <div className="mt-10 flex items-center gap-6 border-t border-line pt-8">
+              {SOCIALS.map(({ href, label, Icon }) => (
+                <a
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="h-5 w-5 text-muted transition-colors hover:text-accent"
+                >
+                  <Icon />
+                </a>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

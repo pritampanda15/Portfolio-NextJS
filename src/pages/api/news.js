@@ -2,6 +2,14 @@
 export default function handler(req, res) {
   const newsData = [
     {
+      title:
+        "First Prize — Research Award for Best Basic Science Abstract, Stanford Anesthesiology",
+      img: "/images/news/stanford-award.jpg",
+      time: "Jun 1, 2026",
+      link: "https://profiles.stanford.edu/pritam-panda",
+      type: "Award",
+    },
+    {
       title: "AI Glossary - Interactive Learning Platform for AI/ML Concepts",
       img: "/images/news/AI.png",
       time: "Dec 28, 2025",
